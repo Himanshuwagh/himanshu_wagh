@@ -1,0 +1,227 @@
+<!DOCTYPE HTML>
+<!--
+	Phantom by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Generative Models</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<div class="inner">
+
+						
+
+							<!-- Nav -->
+							<nav background="transparent">
+								<ul>
+									<li><a style="font-size: 14px;" href="index.html" class="color-me">Home</a></li>
+									<li><a style="font-size: 14px;" href="blog-station.html" class="color-me">Blogs</a></li>
+									<li><a style="font-size: 14px;" href="FILES\CV-Himanshu Wagh.pdf" download="FILES\CV-Himanshu Wagh.pdf" class="color-me">Resume</a></li>
+									<li><a style="font-size: 14px;" href="project-station.html" class="color-me">Projects</a></li>
+									<li><a style="font-size: 14px;" href="about.html" class="color-me">About Me</a></li>
+								</ul>
+							</nav>
+
+						</div>
+					</header>
+
+				<!-- Menu -->
+					<nav id="menu">
+						<h2>Menu</h2>
+						<ul>
+							<li><a href="index.html">Home</a></li>
+							<li><a href="generic.html">Ipsum veroeros</a></li>
+							<li><a href="generic.html">Tempus etiam</a></li>
+							<li><a href="generic.html">Consequat dolor</a></li>
+							<li><a href="elements.html">Elements</a></li>
+						</ul>
+					</nav>
+
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+							<h1 style="text-align:center;font-size: 2.5vw;font-family: 'Montserrat', sans-serif;">Generative Models<br><b style="font-size:35px;font-family: 'Montserrat', sans-serif;font-weight: normal;">The Next Machine Learning Boom?</b></h1>
+							<!-- <span class="image main"><img src="images\blog1.jpg" alt="" /></span> -->
+							<img src="images\blog1\img1.jpg" class="blog1"
+									width="600" 
+									height="400" />
+							<p>Recent AI advances are considerably bigger than the 'AI industry;' these innovations will drastically alter the planet. We've come a long way from the days when Google Brain could find kitten videos and the release of FaceNet, which can recognize faces with 95% accuracy, to tools like AutoML, which can self-design neural networks, and Waymo's self-driving cars driving around San Francisco's streets.</p>
+							<p>To the majority of us, AI has always been about comprehending the world. NLP and NLU are AI technologies that allow computers to interpret text. Breakthroughs in audio understanding are allowing businesses like sales and situations like meetings to become more engaging by allowing humans to focus on the topic at hand while computers take notes. Deep learning and convolutional neural networks are allowing computers to see images and frames in videos in the same way that humans do.</p>
+							<p>However, that is only half of the work done.</p>
+							<p>Humans not only understand the world; they make it. Humans create dialogue, language, art, music, things, religion, and code, among other things. For computers to genuinely be artificial intelligences, they must not only understand but also create.</p>	
+							<p>The solution to these generational issues is Generative models, which constitute a big breakthrough.</p>								
+							<p></p>	
+
+							<h1 style=font-size:2vw>Scope of this blog</h1>
+							<p>This blog will give a comprehensive overview of the area of generative modelling. We'll look at what it means to call a model generative and how it varies from the more commonly researched discriminative modelling. We'll also look at the evolution of generative models across time, as well as the specifics of how they work. Following that, we'll define and introduce many forms of generative models.</p>
+							<hr>
+
+							<p>Machine learning models can be classified into two types based on how they work: Generative modelling and Discriminative modelling. In simple terms, a discriminative model uses conditional probability to generate predictions on unknown data and can be used to solve classification or regression problems. A generative model, on the other hand, concentrates on the distribution of a dataset in order to return a probability for a given occurrence.</p>
+                        	<p>I understand that all of these technical terminology are difficult to understand at first look, but don't worry, the next section will make everything clear and you will understand everything completely</p>
+                            <p>Let’s start with Discriminative models!</p>
+
+							<h1 style=font-size:2vw>What Is Discriminative Modeling?</h1>
+							<p>If you've studied machine learning, you'll know that the majority of the challenges you've encountered have been discriminative (able to recognize or make distinctions with accuracy) in nature. Let's look at an example to better grasp the discriminative model.</p>
+							<p>First, we'll need a dataset with a large number of samples of the thing we're trying to create. This is referred to as the training data, and each data point is referred to as an observation. Each observation is made up of a number of features, which in the case of an image production problem are usually the individual pixel values. Assume we have a Cats and Dogs dataset. We might train a discriminative model to predict whether a given image is of a cat or a dog. Our model would learn that particular colors, forms, and textures are more likely to reveal which animal is the mage, and it would upweight its forecast for images with these features. Note how the discriminative modelling method is depicted in Figure 1-2—note how it differs from the generative modeling process shown in Figure 1-1.</p>
+							<p>When performing discriminative modelling, each observation in the training data has a label, which is a significant difference. Cat images would be labelled 1 in a binary classification issue like our animal classification, whereas non–Cat images, such as Dog images, would be labelled 0. The likelihood that a new observation has label 1—that is, that it is the image of a Cat—is then outputted by our model, which has learned to discriminate between these two groups.</p>
+							<img src="images\blog1\img2.png" class="blog1"
+									width="700" 
+									height="300" />
+
+							<h1 style=font-size:1.5vw>Some Examples of Discriminative Models</h1>
+							<ul>
+								<li>‌Logistic regression.</li>
+								<li>Scalar Vector Machine (SVMs)</li>
+								<li>Traditional neural networks.</li>
+								<li>Nearest neighbor.</li>
+								<li>Conditional Random Fields (CRFs)</li>
+								<li>Decision Trees and Random Forest.</li>
+								
+							</ul>
+
+							<h1 style=font-size:2vw>What Is Generative Modeling?</h1>
+							<p>The term "generative" refers to a type of statistical model that differs from discriminative models.</p>
+							<p>The following is a broad definition of a generative model:</p>
+							<p>In terms of a probabilistic model, a generative model specifies how a dataset is formed. We can produce new data by sampling from this model.</p>
+							<p>Assume we have a dataset with images of cats. We might want to create a model that can create a fresh image of a cat that has never existed but still appears real because the model has learned the general rules that control a cat's appearance. This is the type of problem that generative modelling can tackle. Figure 1-2 depicts a summary of a typical generative modelling method.</p>
+							<img src="images\blog1\img3.png" class="blog1"
+									width="700" 
+									height="300" />
+                            <p>Our goal is to design a model that can generate new sets of features (picture pixels) that appear to be generated according to the same principles as the original data. Given the large variety of ways that individual pixel values can be assigned and the comparatively small number of such arrangements that make up an image of the item we're trying to emulate, this is a conceptually challenging issue for image production.</p>
+							<p>In addition, rather of being deterministic, a generative model must be probabilistic. Our model is not generative if it is simply a fixed calculation, such as taking the average value of each pixel in the dataset. The model gives the same output every time. A stochastic (random) element must be included in the model to alter the individual samples generated by the model.</p>
+							<p>To put it another way, we can consider that there is some unknown probability distribution explaining why some images are likely to be found in the training dataset while others are not. It's our duty to create a model that as nearly as possible resembles this distribution, then sample from it to generate new, different observations that appear to have come from the original training set.</p>
+
+							<h1 style=font-size:2vw>Generative vs Discriminative Models</h1>
+							<p>Discriminative modelling is synonymous with supervised learning, or learning a function that translates an input to an output using a labelled dataset, for the purposes of the work indicated above. The most common application of generative modelling is with an unlabeled dataset (i.e., unsupervised learning), but it may also be used with a labelled dataset to learn how to produce observations from each separate class.</p>
+
+							<p>Informally:</p>
+							<ul>
+								<li>Generative models are capable of producing new data instances.</li>
+								<li>Models that are discriminative distinguish between distinct types of data instances.</li>
+							</ul>
+							<p>A discriminative model might identify a dog from a cat, while a generative model could generate fresh images of animals that seem like genuine animals. Generative models, such as GANs, is example of generative model.</p>
+							<p>Given a set of data instances X and a set of labels Y, in more formal terms:</p>	
+							<ul>
+							    <li>Generative models capture the p(X, Y) joint probability, or just p(X) if no labels are present.</li>
+								<li>The conditional probability p(Y | X) is captured by discriminative models.</li>
+							</ul>
+                            <p>A generative model takes into account the data's distribution and informs you how likely a given occurrence is. Because they can assign a probability to a succession of words, models that predict the next word in a sequence are often generative models (far simpler than GANs). A discriminative model avoids the question of whether or not a given event is likely, instead focusing on the likelihood of a label being applied to it.</p>
+
+							<h1 style="font-size: 2vw;">Intuition behind Generative Modelling</h1>
+							<p>Mathematically, we think about a dataset of examples x1,…,x n  as samples from a true data distribution p(x). In the example image below, the blue region shows the part of the image space that, with a high probability (over some threshold) contains real images, and black dots indicate our data points (each is one image in our dataset). Now, our model also describes a distribution   (x) (green) that is defined implicitly by taking points from a unit Gaussian distribution (red) and mapping them through a (deterministic) neural network — our generative model (yellow).</p>
+							<p>Our network is a function with parameters θ, and tweaking these parameters will tweak the generated distribution of images. Our goal then is to find parameters \thetaθ that produce a distribution that closely matches the true data distribution. Therefore, you can imagine the green distribution starting out random and then the training process iteratively changing the parameters θ to stretch and squeeze it to better match the blue distribution.</p>
+							<img src="images\blog1\img4.png" class="blog1"
+								width="700" 
+								height="250" />
+
+							<h1 style="font-size:2vw">The generative modelling framework</h1>
+							<ul>
+								<li>We have a dataset of observations X.</li>
+								<li>We assume that the observations have been generated according to some unknown distribution, pdata.</li>
+                                <li>A generative model pmodel tries to mimic pdata. If we achieve this goal, we can sample from pmodel to generate observations that appear to have been drawn from pdata.</li>
+								<li>We are impressed by pmodel if:</li>
+								<ul>
+									<li>Rule 1: It can generate examples that appear to have been drawn from pdata.</li>
+									<li>Rule 2: It can generate examples that are suitably different from the observations in X. In other words, the model shouldn’t simply reproduce things it has already seen.</li>
+								</ul>								
+							</ul>
+
+							<h1 style=font-size:2vw>Upsurge of Generative Models</h1>
+							<p>Of late, generative modeling has seen a rise in popularity. In particular, a relatively recent model called Generative Adversarial Networks or GANs introduced by Ian Goodfellow et al.</p>
+							<p>Below is the timeline for some major breakthrough for generative models</p>
+
+							<section class="timeline">
+								<link rel="stylesheet" href="assets/css/timeline.css" />
+							  <div class="timeline">
+								<div class="container left">
+								  <div class="content">
+									<h1 style="font-size:2vw">2014</h1>
+									<img src="https://machinelearningmastery.com/wp-content/uploads/2019/04/Examples-of-GANs-used-to-Generate-New-Plausible-Examples-for-Image-Datasets.png"
+								width="400" height="300" style="position:relative; top: 100;right:2000" />
+									<p>Using GANs to generate new plausible examples for the MNIST handwritten digit dataset, the CIFAR-10 small object photograph dataset, and the Toronto Face Database was the application described in the original paper by Ian Goodfellow, et al. in the 2014 paper "Generative Adversarial Networks," in which GANs were used to generate new plausible examples for the MNIST handwritten digit dataset, the CIFAR-10 small object photograph dataset, and the Toronto Face Database.</p>
+								  </div>
+								</div>
+								<div class="container right">
+								  <div class="content">
+									<h1 style="font-size:2vw">2017</h1>
+									<img src="https://machinelearningmastery.com/wp-content/uploads/2019/06/Examples-of-Photorealistic-GAN-Generated-Faces.png"
+								width="400" height="300" style="position:relative; top: 100;right:2000" />
+									
+
+									<p>Tero Karras et al. exhibit the development of believable realistic images of human faces in their 2017 publication "Progressive Growing of GANs for Improved Quality, Stability, and Variation." They're so lifelike, in fact, that the end product is rather astounding. As a result, the findings drew a lot of media attention.</p>
+								  </div>
+								</div>
+								<div class="container left">
+									<div class="content">
+										<h1 style="font-size:2vw">2018</h1>
+                                      <img src="images\blog1\img5.png"
+								width="500" height="150" style="position:relative; top: 100;right:2000" />
+			
+									  <p>Examples from this paper were used in a 2018 report titled “The Malicious Use of Artificial Intelligence: Forecasting, Prevention, and Mitigation
+										” to demonstrate the rapid progress of GANs from 2014 to 2017</p>
+									</div>
+								  </div>
+							  </div>
+							</section>
+							<hr>
+
+							<h1 style=font-size:2vw>Popular techniques to generative Models</h1>
+							<p>The basic setup is the same in most generative models, although the specifics vary. To give you an idea of the variety, below are three typical generative model approaches:</p>						
+							<ul>
+								<li style="font-weight:bold">‌Generative Adversarial Networks</li>
+								<p>Generative Adversarial Networks or GANs are popular generative models that include two parts, generators and discriminators. This model works by estimating generative models via an adversarial process. The generative model captures the data distribution, and the discriminative model estimates the probability that a sample came from the training data rather than the generative model. GANs are one one of the trending generative models that have been used to create images of humans that do not exist.</p>
+								<li style="font-weight:bold">‌Variational Autoencoders</li>
+								<p>Variational Autoencoders (VAEs) allow us to formalize this problem in the framework of probabilistic graphical models where we are maximizing a lower bound on the log likelihood of the data.</p>
+								<li style="font-weight:bold">‌Autoregressive Models</li>
+								<p>Autoregressive models such as PixelRNN instead train a network that models the conditional distribution of every individual pixel given previous pixels (to the left and to the top). This is similar to plugging the pixels of the image into a char-rnn, but the RNNs run both horizontally and vertically over the image instead of just a 1D sequence of characters.</p>
+							</ul>
+
+							<h1 style=font-size:2vw>Going forward in the Future</h1>
+							<p>There will be hundreds of sectors where generative techniques will enrich our surroundings in the next years. In contrast to many current AI applications, which focus on enhancing existing workflows, generative techniques will create whole new workflows, many of which are currently unimaginable.</p>						
+
+							<p>New job families will be generated by ideas based on generative processes, much as the automobile and the emergence of the Internet spawned entirely new categories of work. Imagine being able to work as a "digital composer" or "fashion product designer" without a formal education in such fields, but still being able to generate successful works using generative technology!</p>
+							<p>Thanks for reading this blog.&#128516;</p>
+                        	
+						</div>
+					</div>
+
+				<!-- Footer -->
+				<footer id="footer">
+					<div class="inner">
+						<section>
+							<h2 style=text-align:center;position:relative;left:220px;font-size:1.5vw>Follow</h2>
+							<ul class="icons" style=text-align:center;position:relative;left:220px;>
+								<li><a href="https://twitter.com/WaghHimanshu" class="icon brands style2 fa-twitter"><span class="label">Twitter</span></a></li>
+								<li><a href="https://www.linkedin.com/in/himanshu-wagh-82ba96141/" class="icon brands style2 fa-linkedin-in"><span class="label">Linkedin</span></a></li>									
+								<li><a href="https://github.com/Himanshuwagh" class="icon brands style2 fa-github"><span class="label">GitHub</span></a></li>									
+								<li><a href= "mailto: waghhimanshu@gmail.com" class="icon solid style2 fa-envelope"><span class="label">Email</span></a></li>
+								<!-- <li><a href="https://medium.com/@waghhimanshu" class="icon brands style2 fa-medium"><span class="label">Medium</span></a></li>									 -->
+							</ul>
+						</section>
+						<ul class="copyright" style=text-align:center;>
+							<li>&copy; Untitled. All rights reserved</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+						</ul>
+					</div>
+				</footer>
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>

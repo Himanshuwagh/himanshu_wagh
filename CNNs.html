@@ -1,0 +1,329 @@
+<!DOCTYPE HTML>
+<!--
+	Phantom by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>ConvNets</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<div class="inner">	
+
+							<!-- Nav -->
+							<nav background="transparent">
+								<ul>
+									<li><a style="font-size: 14px;" href="index.html" class="color-me">Home</a></li>
+									<li><a style="font-size: 14px;" href="blog-station.html" class="color-me">Blogs</a></li>
+									<li><a style="font-size: 14px;" href="FILES\CV-Himanshu Wagh.pdf" download="FILES\CV-Himanshu Wagh.pdf" class="color-me">Resume</a></li>
+									<li><a style="font-size: 14px;" href="project-station.html" class="color-me">Projects</a></li>
+									<li><a style="font-size: 14px;" href="about.html" class="color-me">About Me</a></li>
+								</ul>
+							</nav>
+
+						</div>
+					</header>
+
+
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+							<h1 style="text-align:center;font-size: 2.5vw;font-family: 'Montserrat', sans-serif;">Convolutional Neural Networks<br><b style="font-size:35px;font-family: 'Montserrat', sans-serif;font-weight: normal;">Working with images made easier</b></h1>
+							<!-- <span class="image main"><img src="images\blog1.jpg" alt="" /></span> -->
+							<img src="images\BLOGS\cnn\0.jpg" class="blog1"
+									width="600" 
+									height="400" />
+							<p>Due to its capacity for handling enormous volumes of data, Deep Learning has emerged as an extremely potent technology during the last few decades. Hidden layer networks are now more popular than conventional methods, particularly for pattern recognition. Convolutional Neural Networks are among the most widely used deep neural networks.</p>
+							<p>So let’s take a look at the workings of CNNs.</p>	
+
+							<h1 style=font-size:2vw>Why are Convolutional Neural Networks useful and what are they?</h1>
+                            <p>Convolutional neural networks, often known as CNNs or ConvNets, are a type of Neural Networks that have shown to be particularly successful in applications like image recognition and classification. Feature extraction techniques that required manual labor and a lot of time were previously employed to recognize objects in photos before CNNs. In contrast, convolutional neural networks now offer a more scalable method for classifying images and recognizing objects by utilizing the matrix multiplication techniques of linear algebra.</p>
+                            <p>In addition to providing the vision for robots and autonomous vehicles, ConvNets have been successful in recognizing faces, objects, and traffic signs.</p>
+                            
+                            <figure>
+                            <img src="images\BLOGS\cnn\1.jpg" style="position: relative;left: 250px;"
+									width="700" 
+									height="250" />
+                            <figcaption style="text-align:center;font-size:1vw;font-style: italic;"> Figure 1. Different methods of applications using ConvNets</figcaption>
+                            </figure>
+                            <br>
+                            <p>In Figure 1 above, we can notice different use cases of CNNs like image classifcaition, object detection, and image segmentation. while Figure 2 and Figure 3 below shows an example of ConvNets being used for recognizing everyday objects, humans and items. Lately, ConvNets have been effective in several Natural Language Processing tasks (such as sentence classification) as well.</p>
+                            
+                            <div class="row" >
+                               <div class="column">
+                                    <figure>
+                                        <img src="images\BLOGS\cnn\2.jpg" style="position: relative;left: 30px;"
+                                                width="525" 
+                                                height="350" />
+                                        <figcaption style="position: relative;left: 15px;font-size:1vw;font-style: italic;">Figure 2. ConvNet can be used identify and localize various entities present in image</figcaption>
+                                    </figure>
+                                </div>
+                                <div class="column">
+                                    <figure>
+                                        <img src="images\BLOGS\cnn\3.png" style="position: relative;left: 75px;top: 0px;"
+                                                    width="450" 
+                                                    height="350" />
+                                        <figcaption style="position: relative; left: 110px;font-size:1vw;font-style: italic;">Figure 3. Multiple things can be detected using ConvNet</figcaption>
+                                    </figure>
+                                </div>
+                            </div>
+                            <br>
+                            <p>Therefore, ConvNets are a crucial tool for the majority of machine learning practitioners today. However, it can occasionally be scary to learn about ConvNets and use them for the first time. This blog post's main goal is to help readers understand how Convolutional Neural Networks operate when processing visual data.</p>
+                            <p>In this text, "Fully Connected Layers" refers to Multi Layer Perceptrons.</p>
+                         
+							<h1 style=font-size:2vw>The LeNet Architecture (1990s)</h1>
+							<p>One of the first convolutional neural networks, LeNet, contributed to the development of deep learning. After numerous successful iterations since 1988, Yann LeCun's groundbreaking work was given the name LeNet5. At that time, character recognition activities like reading zip codes, numbers, etc. were primarily performed using the LeNet architecture.</p>
+							<p>In the sections below, we'll explain how the LeNet architecture picks up on picture recognition. The LeNet has been improved upon by a number of different architectures that have been proposed in recent years, but they all draw heavily on the LeNet's core ideas and are thus easier to comprehend if you are familiar with the former.</p>
+                            
+                            <figure>
+                                <img src="images\BLOGS\cnn\4.png" style="position: relative;left: 125px;"
+                                width="950" 
+                                height="250" />
+                                <figcaption style="text-align:center;font-size:1vw;font-style: italic;">Figure 4. CNN to classify image into 4 different categories</figcaption>
+                            </figure>
+                            <br>
+                            <p>The Convolutional Neural Network in Figure 4 classifies an input image into one of four groups: dog, cat, boat, or bird. The original LeNet was primarily utilized for letter recognition tasks. As shown in the graphic above, the network properly assigns the highest probability (0.94) for boat when given an image of a boat as input. The output layer's probabilities should add up to one (explained later in this post).</p>
+                            
+							<p>There are three main operations in the ConvNet shown in Figure 4 above:</p>
+							<ul>
+								<li>Convolution</li>
+								<li>Pooling or Sub Sampling</li>
+								<li>Fully Connected Layer</li>		
+							</ul>
+                            <p>Understanding how these operations operate is crucial to having a thorough understanding of Convolutional Neural Networks because they serve as the fundamental building blocks of all convolutional neural networks. Below, we'll attempt to comprehend the rationale behind each of these operations.</p>
+
+							<h1 style=font-size:2vw>A matrix of pixel values makes up an image</h1>
+
+							<p>Essentially, a matrix of pixel values can be used to represent any image.</p>
+                            <figure>
+                                <img src="images\BLOGS\cnn\5.jpg" style="position: relative;left: 325px;"
+                                width="525" 
+                                height="300" />
+                                <figcaption style="position: relative; left: 410px;font-size:1vw;font-style: italic;">Figure 5. Image consists of 3 channels namely RGB</figcaption>
+                            </figure>
+							<br>
+                            <p>A common word for a specific part of an image is a Channel. Red, green, and blue make up the three channels of an image from a typical digital camera; you may think of these as three 2D matrices stacked over one another (one for each colour), with pixel values ranging from 0 to 255 in each. Figure 5 below can be used to visualize the image RGB channels</p>
+                            <figure>
+                                <img src="images\BLOGS\cnn\6.png" style="position: relative;left: 290px;"
+                                width="625" 
+                                height="250" />
+                                <figcaption style="position: relative; left: 410px;font-size:1vw;font-style: italic;">Figure 6. Image as a representation as a matrix of numbers</figcaption>
+                            </figure>
+							<br>
+                            <p>On the other hand, a grayscale image just contains one channel. We will only take into account grayscale photos for the sake of this post, so each image will be represented by a single 2D matrix. Each pixel in the matrix will have a value between 0 and 255, with 0 denoting black and 255 denoting white. Figure 6 is grayscale image will to help to represent an image as matrix of values ranging from 0 to 255</p>
+
+                        
+							<h1 style=font-size:2vw>The Convolution Step</h1>
+
+							<p>The "convolution" operator is where ConvNets get their name. In the case of a ConvNet, the main goal of convolution is to extract features from the input image. By employing tiny squares of input data to learn image attributes, convolution preserves the spatial relationship between pixels. We won't dive into the specifics of convolution's mathematics here; instead, we'll focus on how it applies to images.</p>
+
+							<p>Every image can be thought of as a matrix of pixel values, as we covered before. Consider a 6 × 6 image with simply 0 and 1 as the pixel values (keep in mind that pixel values for a grayscale image vary from 0 to 255).</p>
+                            <p>Consider the following additional 3 x 3 matrix as well:</p>
+							<ul>
+								<li>Then, as demonstrated in the animation in, the convolution of the 6 x 6 image and the 3 x 3 matrix may be calculated.</li>
+							</ul>
+                            <figure>
+                                <img src="images\BLOGS\cnn\7.gif" style="position: relative;left: 250px;"
+                                width="725" 
+                                height="400" />
+                                <figcaption style="position: relative; left: 450px;font-size:1vw;font-style: italic;">Figure 7. Convolutional process over a image</figcaption>
+                            </figure>
+							<br>
+
+							<p>Think about how the computation described above is carried out for a moment like shown in Figure 7. The orange colored matrix is moved over the blue matrix by one pixel (also known as a "stride"), and for each position, element-wise multiplication (between the two matrices) is computed. The outputs of the multiplication are then added to obtain the final integer, which constitutes one element of the output matrix. Keep in mind that the 3 x 3 matrix only "sees" a portion of the input image during each stride.</p>
+							<p>The 3x3 matrix is referred to as a "filter," "kernel," or "feature-detector" in CNN lingo, while the matrix created by swiping the filter over the picture and computing the dot product is referred to as a "convolved feature," "activation map," or "feature map." Filters serve as feature detectors from the original input image, it is vital to remember that.</p>	
+                            <figure>
+                                <img src="images\BLOGS\cnn\8.gif" style="position: relative;left: 300px;"
+                                width="625" 
+                                height="350" />
+                                <figcaption style="position: relative; left: 410px;font-size:1vw;font-style: italic;">Figure 8. Example of CNN computation carried out over image</figcaption>
+                            </figure>
+							<br>
+
+                            <p>Above image (Figure 8) will demonstrate how convolutional process is carried out. To create a feature map, a filter (with a red outline) is applied to the input image during a convolution operation. A distinct feature map is produced when another filter (with a green outline) is convolutioned over the same image. It is significant to notice that the Convolution procedure preserves the original image's local dependencies. Also take note of the varied feature maps that these two distinct filters produce from the identical original image. Keep in mind that, as we have already discussed, the image and the two filters above are essentially numeric matrices.</p>
+                            <p>Although we still need to define parameters like the number of filters, filter size, network architecture, etc. prior to the training process, in practice a CNN learns the values of these filters on its own throughout the training process. Our network gets better at extracting picture attributes and identifying patterns in unseen images as we increase the number of filters we have.</p>
+                            
+                            <p>The size of the Feature Map (Convolved Feature) is controlled by three parameters [4] that we need to decide before the convolution step is performed:</p>
+                            <ul>
+                                <li>Depth: Depth is determined by how many filters we employ throughout the convolution process. Three separate filters are used to conduct convolution on the original boat image in the network depicted in Figure 9, resulting in the three feature maps that are displayed. The 'depth' of the feature map would be three since you may think of these three feature maps as stacked 2D matrices.</li>
+                                <figure>
+                                    <img src="images\BLOGS\cnn\9.png" style="position: relative;left: 350px;"
+                                    width="525" 
+                                    height="250" />
+                                    <figcaption style="position: relative; left: 470px;font-size:1vw;font-style: italic;">Figure 9. Feature map with image depth=3</figcaption>
+                                </figure>
+                                <br>
+
+                                <li>Stride: The amount of pixels by which we slide our filter matrix over the input matrix is known as the "stride." We move the filters one pixel at a time when the stride is 1. When the stride is 2, the filters move around at a rate of 2 pixels each movement. A longer stride results in smaller feature maps. </li>                                
+                                <li>Zero-padding: In order to apply the filter on bordering elements of our input image matrix, it can be useful to pad the input matrix with zeros around the edge. Zero padding has the advantage of allowing us to regulate the feature maps' size. Wide convolution is the addition of zero-padding, and narrow convolution is the absence of zero-padding. There are three types of padding:</li>
+                                <ul  style="list-style-type: circle;">
+                                    <li>Valid padding: This is also known as no padding. In this case, the last convolution is dropped if dimensions do not align.</li>
+                                    <li>Same padding: This padding ensures that the output layer has the same size as the input layer</li>                                
+                                    <li>Full padding: This type of padding increases the size of the output by adding zeros to the border of the input.</li>
+                                    <figure>
+                                        <img src="images\BLOGS\cnn\10.gif" style="position: relative;left: 250px;"
+                                        width="625" 
+                                        height="300" />
+                                        <figcaption style="position: relative; left: 390px;font-size:1vw;font-style: italic;">Figure 10. Use of Padding during convolutional process</figcaption>
+                                    </figure>            
+                                </ul>
+                            </ul>
+
+							<h1 style="font-size: 2vw;">The Pooling Step</h1>
+
+							<p>Each feature map's dimensionality is decreased while the most crucial data is retained using spatial pooling, also known as sub-sampling or down-sampling. Different types of spatial pooling exist: Maximum, Median, Sum, etc.</p>
+							<p>In the Max Pooling scenario, we specify a spatial neighborhood (for instance, a 2 by 2 window) and select the largest element from the rectified feature map inside that window. We might choose to take the average (Average Pooling) or total of all the items in that window rather than just the largest one. Max Pooling has been demonstrated to function better in practice.</p>
+							<p>Figure 11 shows an example of Max Pooling operation on a Rectified Feature map (obtained after convolution + ReLU (activation function) operation) by using a 2×2 window.</p>
+
+                            <figure>
+                                <img src="images\BLOGS\cnn\11.png" style="position: relative;left: 350px;"
+                                width="500" 
+                                height="400" />
+                                <figcaption style="position: relative; left: 440px;font-size:1vw;font-style: italic;">Figure 11. Example of MaxPooling over a 4 x 4 image</figcaption>
+                            </figure>   
+                            <br> 
+
+                            <p>We slide our 2 x 2 window by 2 cells (also called ‘stride’) and take the maximum value in each region. As shown above, this reduces the dimensionality of our feature map.</p>
+                            <p>Pooling's purpose is to gradually lower the input representation's spatial size [4]. specifically, pooling:</p>
+
+                            <ul>
+                                <li>makes the input representations (feature dimension) smaller and more manageable</li>
+                                <li>reduces the number of parameters and computations in the network, therefore, controlling overfitting</li>
+                                <li>makes the network invariant to small transformations, distortions and translations in the input image (a small distortion in input will not change the output of Pooling – since we take the maximum / average value in a local neighborhood).</li>
+                                <li>helps us arrive at an almost scale invariant representation of our image (the exact term is “equivariant”). This is very powerful since we can detect objects in an image no matter where they are located (read [18] and [19] for details).</li>
+                            </ul> 
+
+                            <p>The output of the Pooling Layer acts as an input to the Fully Connected Layer, which we will discuss in the next section.</p>
+
+							<h1 style=font-size:2vw>Fully Connected Layer</h1>
+							<p>The output layer of the Fully Connected layer's conventional Multi Layer Perceptron has a SoftMax / Sigmoid activation function (other classifiers like SVM can also be used, but will stick to SoftMax in this post). According to the definition of "Fully Connected," every neuron in the layer below is linked to every neuron in the layer above. </p>
+							<p>High-level features of the input image are represented by the output from the convolutional and pooling layers. The Fully Connected layer's objective is to categorize the input image into several classes using these attributes and the training dataset. For instance, the image classification task we set out to complete may produce a number of different results, as seen in Figure 12 below (note that Figure 12 does not show hidden layers in the fully connected layer)</p>
+
+							<figure>
+                                <img src="images\BLOGS\cnn\12.png" style="position: relative;left: 200px;"
+                                width="800" 
+                                height="270" />
+                                <figcaption style="position: relative; left: 440px;font-size:1vw;font-style: italic;">Figure 12. Image classification using fully connected layer</figcaption>
+                            </figure>   
+                            <br>
+
+							<p>In addition to classifying data, learning non-linear combinations of these features can be done (typically) affordably by adding a fully linked layer. For the classification task, the majority of the features from convolutional and pooling layers may be useful, but combinations of those features may be even more effective [11].</p>
+							<p>The Fully Connected Layer's output probabilities add up to one. The activation function in the output layer of the Fully Connected Layer is the Softmax, which ensures this. A vector of arbitrary real-valued scores is compressed by the Softmax function to a vector of values between zero and one that add to one.</p>
+					
+							<h1 style=font-size:2vw>Putting it all together – Training using Backpropagation</h1>
+							<p>As was said before, the Fully Connected layer serves as a classifier while the Convolution + Pooling layers operate as feature extractors from the input image.<br>						
+							Note that in Figure 13 below, since the input is images of digits (0-9), the target probability is 1 for correct predicted class and 0 for other digit classes, i.e:</p>
+							<ul>
+								<li>‌Input Image = among 10 images of digits (0-9)</li>								
+								<li>‌Target Vector = [0, 0, 1, 0, 0, 0, 0, 0, 0, 0 ] ………….. ( 1 would be for actual digit among these 10 digits)</li>																					
+							</ul>
+
+							<figure>
+                                <img src="images\BLOGS\cnn\13.gif" style="position: relative;left: 220px;"
+                                width="800" 
+                                height="270" />
+                                <figcaption style="position: relative; left: 440px;font-size:1vw;font-style: italic;">Figure 13. Example of CNN recognizing digits from images</figcaption>
+                            </figure>   
+                            <br>
+							
+							<p>The overall training process of the Convolution Network may be summarized as below:</p>
+							<ul>
+								<li><u >Step1</u> : We initialize all filters and parameters / weights with random values</li>
+								<li><u>Step2</u> : The network takes a training image as input, goes through the forward propagation step (convolution, ReLU and pooling operations along with forward propagation in the Fully Connected layer) and finds the output probabilities for each class.</li>
+								<ul>
+									<li style="list-style-type: circle;">Lets say the output probabilities for the image above are [0.2, 0.4, 0.1, 0.3,0.2, 0.4, 0.1, 0.3,0.2, 0.4]</li>
+									<li style="list-style-type: circle;">Since weights are randomly assigned for the first training example, output probabilities are also random.</li>
+								</ul>
+								<li><u>Step3</u> : Calculate the total error at the output layer (summation over all 10 classes)</li>
+								<ul>
+									<li style="list-style-type: circle;">Total Error = ∑ ½ (target probability – output probability) ²</li>								
+								</ul>
+								<li><u>Step4</u> : Use Backpropagation to calculate the gradients of the error with respect to all weights in the network and use gradient descent to update all filter values / weights and parameter values to minimize the output error.</li>
+								<ul>
+									<li style="list-style-type: circle;">The weights are adjusted in proportion to their contribution to the total error.</li>
+									<li style="list-style-type: circle;">When the same image is input again, output probabilities might now be [0.03, 0.02, 0.7, 0.02,0.01, 0.01, 0.10, 0.05,0.01, 0.05], which is closer to the target vector [0, 0, 1, 0, 0, 0, 0, 0, 0, 0 ]</li>
+									<li style="list-style-type: circle;">This means that the network has learnt to classify this particular image correctly by adjusting its weights / filters such that the output error is reduced.</li>
+									<li style="list-style-type: circle;">Parameters like number of filters, filter sizes, architecture of the network etc. have all been fixed before Step 1 and do not change during training process – only the values of the filter matrix and connection weights get updated.</li>									
+								</ul>
+								<li><u>Step5</u> : Repeat steps 2-4 with all images in the training set.</li>
+							</ul>
+
+							<p>The ConvNet has now been trained, which essentially means that all of its weights and parameters have been adjusted to properly categorize photos from the training set.<br>
+							The ConvNet would proceed through the forward propagation phase when a new (unseen) image was input and would produce a probability for each class (for a new image, the output probabilities are computed using the weights that have been optimized to properly categorise all the prior training instances). The network will (hopefully) generalize well to new photos and classify them into the appropriate categories if our training set is sizable enough.</p>
+							<p><u>Note 1</u> : To provide insight into the training process, the stages above have been oversimplified and mathematical specifics have been avoided. For a mathematical formulation and an in-depth explanation, see [4] and [12].<br>
+							<u>Note 2</u> : Two sets of alternate Convolution and Pooling layers were used in the above mentioned example. Please be aware, however, that any number of times in a single ConvNet, these procedures can be repeated. In fact, the greatest convolutional networks nowadays have tens of layers for both convolution and pooling! Furthermore, a pooling layer is not required to follow each convolutional layer.</p>
+
+							<h1 style=font-size:2vw>Visualizing Convolutional Neural Networks</h1>
+
+							<p>Generally speaking, the more complex features our network can learn to detect, the more convolution steps we will have. For instance, in image recognition, a ConvNet may learn to recognize edges in the first layer's raw pixels, utilize those edges in the second layer to recognize basic shapes, and then use those shapes to recognize higher-level features, such facial shapes, in the upper layers [14]. Figure 14 below illustrates this; it was provided merely to illustrate the concept. These features were learned using a Convolutional Deep Belief Network (this is only an example: real life convolution filters may detect objects that have no meaning to humans).</p>						
+							
+                            <figure>
+                                <img src="images\BLOGS\cnn\14.png" style="position: relative;left: 350px;"
+                                width="500" 
+                                height="400" />
+                                <figcaption style="position: relative; left: 440px;font-size:1vw;font-style: italic;">Figure 14. Small features is used to recognize faces</figcaption>
+                            </figure>   
+                            <br> 
+
+							<h1 style=font-size:2vw>Other ConvNet Architectures</h1>
+
+							<p>Convolutional Neural Networks have been around since early 1990s. We discussed the LeNet above which was one of the very first convolutional neural networks. Some other influential architectures are listed below [3] [4].</p>
+
+							<ul>
+								<li><a style="color:black" href="http://yann.lecun.com/exdb/publis/pdf/lecun-01a.pdf"><b style="font-weight:600"><u>LeNet (1990s)</u></a> :</b>&nbsp;&nbsp;&nbsp;&nbsp;Already covered in this article.</li>							
+								<li><b style="font-weight:600"><u>1990s to 2012</u> :</b>&nbsp;&nbsp;&nbsp; In the years from late 1990s to early 2010s convolutional neural network were in incubation. As more and more data and computing power became available, tasks that convolutional neural networks could tackle became more and more interesting.</li>
+								<li><a style="color:black" href="https://proceedings.neurips.cc/paper/2012/file/c399862d3b9d6b76c8436e924a68c45b-Paper.pdf"><b style="font-weight:600"><u>AlexNet (2012)</u></a> :</b>&nbsp;&nbsp;&nbsp; In 2012, Alex Krizhevsky (and others) released AlexNet which was a deeper and much wider version of the LeNet and won by a large margin the difficult ImageNet Large Scale Visual Recognition Challenge (ILSVRC) in 2012. It was a significant breakthrough with respect to the previous approaches and the current widespread application of CNNs can be attributed to this work.</li>
+								<li><a style="color:black" href="https://arxiv.org/abs/1311.2901"><b style="font-weight:600"><u>ZF Net (2013)</u></a> :</b>&nbsp;&nbsp;&nbsp; The ILSVRC 2013 winner was a Convolutional Network from Matthew Zeiler and Rob Fergus. It became known as the ZFNet (short for Zeiler & Fergus Net). It was an improvement on AlexNet by tweaking the architecture hyperparameters.</li>
+								<li><a style="color:black" href="https://arxiv.org/abs/1409.4842"><b style="font-weight:600"><u>GoogLeNet (2014)</u></a> :</b>&nbsp;&nbsp;&nbsp; The ILSVRC 2014 winner was a Convolutional Network from Szegedy et al. from Google. Its main contribution was the development of an Inception Module that dramatically reduced the number of parameters in the network (4M, compared to AlexNet with 60M).</li>
+								<li><a style="color:black" href="https://arxiv.org/abs/1409.1556"><b style="font-weight:600"><u>VGGNet (2014)</u></a> :</b>&nbsp;&nbsp;&nbsp; The runner-up in ILSVRC 2014 was the network that became known as the VGGNet. Its main contribution was in showing that the depth of the network (number of layers) is a critical component for good performance.</li>
+								<li><a style="color:black" href="https://arxiv.org/abs/1512.03385"><b style="font-weight:600"><u>ResNets (2015)</u></a> :</b>&nbsp;&nbsp;&nbsp; Residual Network developed by Kaiming He (and others) was the winner of ILSVRC 2015. ResNets are currently by far state of the art Convolutional Neural Network models and are the default choice for using ConvNets in practice (as of May 2016).</li>
+								<li><a style="color:black" href="https://arxiv.org/abs/1608.06993"><b style="font-weight:600"><u>DenseNet (August 2016)</u></a> :</b>&nbsp;&nbsp;&nbsp; Recently published by Gao Huang (and others), the Densely Connected Convolutional Network has each layer directly connected to every other layer in a feed-forward fashion. The DenseNet has been shown to obtain significant improvements over previous state-of-the-art architectures on five highly competitive object recognition benchmark tasks. Check out the Torch implementation here.</li>								
+							</ul>
+
+							<h1 style=font-size:2vw>Conclusions</h1>
+
+							<p>I strongly recommend reading the ConvNets course notes from Stanford University as well as the other top-notch sources listed under References below to gain a deeper knowledge of some of these topics. Please feel free to leave a comment below if you need any help understanding any of the above topics or if you have any questions or recommendations.<br>						
+						    I've attempted to succinctly describe the main ideas behind convolutional neural networks in this post. There are a few elements I've omitted or oversimplified, but I hope this essay provided you a general idea of how they operate.</p>
+                        	
+						</div>
+					</div>
+
+				<!-- Footer -->
+				<footer id="footer">
+					<div class="inner">
+						<section>
+							<h2 style=text-align:center;position:relative;left:220px;font-size:1.6vw>Follow</h2>
+							<ul class="icons" style=text-align:center;position:relative;left:220px;>
+								<li><a href="https://twitter.com/WaghHimanshu" class="icon brands style2 fa-twitter"><span class="label">Twitter</span></a></li>
+								<li><a href="https://www.linkedin.com/in/himanshu-wagh-82ba96141/" class="icon brands style2 fa-linkedin-in"><span class="label">Linkedin</span></a></li>									
+								<li><a href="https://github.com/Himanshuwagh" class="icon brands style2 fa-github"><span class="label">GitHub</span></a></li>									
+								<li><a href= "mailto: waghhimanshu@gmail.com" class="icon solid style2 fa-envelope"><span class="label">Email</span></a></li>
+								<!-- <li><a href="https://medium.com/@waghhimanshu" class="icon brands style2 fa-medium"><span class="label">Medium</span></a></li>									 -->
+							</ul>
+						</section>
+						<ul class="copyright" style=text-align:center;>
+							<li>&copy; Untitled. All rights reserved</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+						</ul>
+					</div>
+				</footer>
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>

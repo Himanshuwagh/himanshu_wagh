@@ -1,0 +1,325 @@
+<!DOCTYPE HTML>
+<!--
+	Phantom by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Linear Algebra for Data Science</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<div class="inner">
+
+						
+
+							<!-- Nav -->
+							<nav background="transparent">
+								<ul>
+									<li><a style="font-size: 14px;" href="index.html" class="color-me">Home</a></li>
+									<li><a style="font-size: 14px;" href="blog-station.html" class="color-me">Blogs</a></li>
+									<li><a style="font-size: 14px;" href="FILES\CV-Himanshu Wagh.pdf" download="FILES\CV-Himanshu Wagh.pdf" class="color-me">Resume</a></li>
+									<li><a style="font-size: 14px;" href="project-station.html" class="color-me">Projects</a></li>
+									<li><a style="font-size: 14px;" href="about.html" class="color-me">About Me</a></li>
+								</ul>
+							</nav>
+
+						</div>
+					</header>
+
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+							<h1 style="text-align:center;font-size: 2.5vw;font-family: 'Montserrat', sans-serif;">Linear Algebra<br><b style="font-size:35px;font-family: 'Montserrat', sans-serif;font-weight: normal;">Essentials for Data Science</b></h1>
+							<!-- <span class="image main"><img src="images\blog1.jpg" alt="" /></span> -->
+							<img src="images\BLOGS\linear_algebra\0.jpg" class="blog1"
+									width="600" 
+									height="400" />
+							<p><i style="font-weight:600;">"How much mathematics do I need to learn to become a data scientist?"</i>  is one of the most frequent queries that trouble new data scientists.
+								Despite the fact that the question appears straightforward, there isn't a straightforward solution. </p>
+							<p>Typically, it is advised that you start by learning some fundamental descriptive and inferential statistics. That's a good place to start.
+								
+								But after understanding the fundamentals of machine learning, you'll need to pick up some additional arithmetic. To comprehend how these algorithms operate, you must have it. What are their restrictions, and whether there are any underlying presumptions that they might have. </p>
+							<p>There could be a wide range of topics to learn, such as <b style="font-weight:600;">algebra, calculus, statistics, three-dimensional geometry, etc. </b>
+								
+								The majority of specialists who you consult if you're puzzled (as I was) and want to know what to learn next will advise you to move forward with <b style="font-weight:600;">Linear Algebra</b>.								
+								The issue, though, continues. It will be difficult to learn linear algebra, which will be the next difficulty. The intricate mathematics and derivations can be confusing, so studying them won't be as beneficial. I personally underwent that path, which is why I chose to write this in-depth manual.
+								
+							<p>You've come to the right place if you've ever wondered how and what to learn in linear algebra. Just follow this blog which will help you resolving this issue.</p>
+
+							<h1 style=font-size:2vw>What Is Matrices?</h1>
+							<p>There are many distinct types of matrices, and operations on vectors and matrices play a significant role in linear algebra.
+
+								When learning linear algebra, especially the portions applicable to machine learning, there are a few sorts of matrices that you might run into repeatedly.</p>
+							<p>The fundamental units of data science are matrices. They emerge across languages in a variety of avatars. From Python's numpy arrays to R's dataframes to MATLAB's matrices.
+
+								In its simplest form, a matrix is simply a group of numbers arranged in a rectangular or array-like pattern. This could be an abstract structure, a network, or even an image.</p>
+							
+							<figure>
+									<img src="images\BLOGS\linear_algebra\1.jpg" style="position: relative;left: 350px;"
+									width="500" 
+									height="250" />
+									<figcaption style="text-align:center;font-size:1vw;font-style: italic;"> Figure 1. An 3 x 3 matrix</figcaption>				
+							</figure>
+
+							<p>The matrix, or matrices as the plural, is surprisingly more prevalent than you may imagine.
+
+								All of our Photoshop-edited photographs use matrices to render visuals by processing linear transformations. A geometric object's linear transformation can be represented by a <b style="font-weight:600;">"Square matrix."</b></p>
+							
+							<figure>
+									<img src="images\BLOGS\linear_algebra\2.png" style="position: relative;left: 435px;"
+									width="350" 
+									height="200" />
+									<figcaption style="text-align:center;font-size:1vw;font-style: italic;">Figure 2. A 2 x2 Square matrix</figcaption>				
+							</figure>
+                            <br>
+							<p>For example, the reflection of an item in the vertical Y-axis is produced using the matrix in the Cartesian X-Y plane. This would produce an assassin's upside-down reflection in a pool of blood in a video game. 
+
+								The matrix would be more challenging to use to extend or contract the reflection if the video game featured curved reflecting surfaces, like a room full of mirrors.</p>
+							
+							<figure>
+									<img src="images\BLOGS\linear_algebra\3.png" style="position: relative;left: 380px;"
+									width="450" 
+									height="200" />
+									<figcaption style="text-align:center;font-size:1vw;font-style: italic;">Figure 3 . Vertical Matrix been converted to horizontal matrix</figcaption>				
+							</figure>
+
+                            <P>Matrix analysis is used in applied physics to examine optical, quantum, and electrical circuits. Engineering fields like chemical and aerospace all call for precisely calibrated calculations that are produced via matrix transformations. In hospitals, matrices are used to produce the outputs of medical imaging procedures like CAT scans and MRIs.
+
+								In programming, messages are coded and encrypted using matrices and inverse matrices. Matrix-based motions for robots are the fundamental building blocks of robotics and automation. Matrix calculations are used to acquire the inputs for controlling robots.</P>
+
+							<h1 style=font-size:2vw>Notation of a Matrix</h1>
+							<p>Traditionally, m and n are used to represent a matrix's number of rows and columns, respectively. Height x width equals a rectangle's area, thus we use m x n to represent a matrix's size. Consequently, if the matrix were given the name A, it would be notated as</p>
+							
+							<figure>
+								<img src="images\BLOGS\linear_algebra\4.png" style="position: relative;left: 180px;"
+								width="840" 
+								height="200" />
+								<figcaption style="text-align:center;font-size:1vw;font-style: italic;">Figure 4. Notation of a matrix</figcaption>				
+						    </figure>
+							<br>
+                            <p>Here, m=3 and n=3. Thus, there are 9 elements in the matrix A. A square matrix is one that has <b style="font-weight:600;">m=n.</b>
+
+								A matrix with just one row is called a <b style="font-weight:600;">row matrix.</b> A matrix with just one column is called a <b style="font-weight:600;">column matrix.</b></p>
+
+							<figure>
+									<img src="images\BLOGS\linear_algebra\5.png" style="position: relative;left: 340px;"
+									width="540" 
+									height="300" />
+									<figcaption style="text-align:center;font-size:1vw;font-style: italic;"> Figure 5. Rows and columns in matrix</figcaption>				
+							</figure>
+							<br>
+
+							<h1 style="font-size: 2vw;">Basic operations using matrices</h1>
+							<p>Matrices just like numbers can be added, subtracted and multiplied. The division though is slightly nuanced. Not all matrices can be divided.
+								There are certain rules for even the addition, subtraction and multiplication.</p>
+							
+							<h1 style="font-size: 1.5vw;">1. Matrices Addition and Subtraction</h1>
+
+							<p>Matrix addition is quite similar to simple addition in mathematics. All you require is that the matrices be added in the same sequence. When you add matrices on your own, this concept will become clear.
+								
+							A matrix <b style="font-weight:600;">C (m*n)</b> is created by adding two matrices <b style="font-weight:600;">A (m*n)</b> and <b style="font-weight:600;">B (m*n)</b>. The components of C consist of the sum of the corresponding components of A and B.</p>
+                                
+							<figure>
+								<img src="images\BLOGS\linear_algebra\6.gif" style="position: relative;left: 350px;top:-40px;"
+								width="500" 
+								height="230" />
+								<figcaption style="text-align:center;font-size:1vw;font-style: italic;position: relative;left:10px;">Figure 6. Matrix addition of two 2 x 2 matrices</figcaption>				
+						    </figure>
+
+							<p><b style="font-weight:600;">Subtraction works similarly,</b></p>
+							<figure>
+								<img src="images\BLOGS\linear_algebra\7.png" style="position: relative;left: 315px;top:-40px;"
+								width="550" 
+								height="270" />
+								<figcaption style="text-align:center;font-size:1vw;font-style: italic;position: relative;left: 10px;">Figure 7. Matrix subtraction of two 3 x 3 matrices</figcaption>				
+						    </figure>
+                            <br>
+							<p><i style="font-weight:600;">"The important thing to remember is that only matrices with the same number of rows and columns, or the same order (*order = rows x columns), can be added to or subtracted from."</i></p>                            
+							<ul>
+								<li>The ratio of the number of rows of A to those of B</li>
+								<li>The ratio of the number of columns in column A to column B</li>
+							</ul>
+							
+							<p><b style="font-weight:600;">Points to note :</b></p>
+
+							<ul>
+								<li>Matrix addition is <b style="font-weight:600;">commutative</b>, meaning that <b style="font-weight:600;">A + B = B + A.</b></li>
+								<li>Matrix addition is <b style="font-weight:600;">associative</b>, meaning that <b style="font-weight:600;">A + (B + C) = (A + B) + C</b></li>
+								<li>Matrix subtraction is <b style="font-weight:600;">non-commutative</b>, which indicates that <b style="font-weight:600;">A - B = B - A.</b></li>
+								<li>Matrix subtraction is <b style="font-weight:600;">non-associative</b>, i.e., <b style="font-weight:600;">A - (B - C) = (A - B) - C</b></li>
+								<li>If A and B are ordered differently, <b style="font-weight:600;">A + B</b> and <b style="font-weight:600;">A - B</b> cannot be computed.</li>
+								<li>The complexity of an addition or subtraction operation is <b style="font-weight:600;">O(m^n)</b>, where m^n is the order of the matrices.</li>								
+							</ul>
+
+							<p>However, multiplication has a little complexity.</p>
+
+							<h1 style="font-size: 1.5vw;">2. Matrix Multiplication</h1>
+
+							<p>The multiplication of two matrices A(m*n) and B(n*p) gives a matrix C(m*p). Notice that for multiplication you do not need the rows/columns of A and B to be the same. You only need</p>
+							<ul>
+								<li>No. of Columns of A = No. of Rows of B, or</li>
+								<li>No. of Columns of B = No. of Rows of A.</li>
+							</ul>
+
+							<p>To calculate the top-left element of the resulting matrix C, multiply elements of 1st row of A with 1st column of B and add them.</p>
+
+							<figure>
+								<img src="images\BLOGS\linear_algebra\8.gif" style="position: relative;left: 250px;top:-40px;"
+								width="700" 
+								height="400" />										
+						    </figure>
+
+							<p><b style="font-weight:600;">Points to note :</b></p>
+
+							<ul>
+								<li>Matrix multiplication is non-commutative, therefore  A * B ≠ B * A</li>
+								<li>Matrix multiplication is associative, therefore A * (B^C) = (A^B) * C</li>
+								<li>The existence of A^B does not prove that B^A exists.</li>
+								<li>The complexity of the operation (A^B) is O(m*n*p), where m^n and n*p are the respective orders of A and B.</li>
+								<li>Matrix C has an order of m^p when calculated as A^B, where m^n and n^p represent the order of A and B, respectively.</li>
+								
+							</ul>
+
+                            <h1 style="font-size:1.8vw;">Terms related to Matrix</h1>
+
+
+							<h1 style="font-size:2vw;">Representing equations in matrix form</h1>
+
+							<p>A system of linear equations can be represented in matrix form using a coefficient matrix, a variable matrix, and a constant matrix.</p>						
+							<br>
+							<figure>
+								<img src="images\BLOGS\linear_algebra\9.png" style="position: relative;left:290px;top:-40px;"
+								width="600" 
+								height="300" />		
+								<figcaption style="text-align:center;font-size:1vw;font-style: italic;position: relative;left: 10px;">Figure 9. Matrix representing linear equations</figcaption>												
+						    </figure>
+
+							<p>It can be verified very easily that the expression contains our three equations.<br> We will name our matrices as ‘A’, ‘X’ and ‘b’.
+
+								It explicitly verifies that we can write our equations together in one place as</p>
+								
+							<ul style="text-align:center;font-weight: bold;">AX = b</ul>
+
+							<h1 style="font-size:2vw;">Inverse of a Matrix</h1>
+							<p>Just like a number has a reciprocal...</p>
+							<figure>
+								<img src="images\BLOGS\linear_algebra\10.png" style="position: relative;left:490px;top:-40px;"
+								width="240" 
+								height="120" />		
+								<figcaption style="text-align:center;font-size:1vw;font-style: italic;position: relative;left: 20px;">Figure 10. Reciprocal of an integer</figcaption>
+						    </figure>
+
+							<p>a matrix has an inverse :</p>
+							<figure>
+								<img src="images\BLOGS\linear_algebra\11.png" style="position: relative;left:490px;top:-40px;"
+								width="240" 
+								height="120" />		
+								<figcaption style="text-align:center;font-size:1vw;font-style: italic;position: relative;left: 20px;">Figure 11. Inverse of an matrix</figcaption>								
+						    </figure>
+							<br>
+							<p><i>We write A<sup>-1</sup> instead of 1/A because we don't divide by a matrix! When we multiply a matrix by its inverse we get the Identity Matrix "I" (which is like "1" for matrices):</i></p>
+								
+							<ul style="text-align:center;font-weight: bold;">A × A<sup>-1</sup> = I</ul>
+
+							<h1 style="font-size:2vw;">Identity Matrix</h1>
+
+							<p>We just mentioned the "Identity Matrix". It is the matrix equivalent of the number "1":</p>
+							<figure>
+								<img src="images\BLOGS\linear_algebra\12.png" style="position: relative;left:420px;top:-40px;"
+								width="400" 
+								height="120" />		
+								<figcaption style="text-align:center;font-size:1vw;font-style: italic;position: relative;left: 30px;">Figure 12. Identity matrix </figcaption>								
+						    </figure>
+
+							<ul>
+								<li>It is <b style="font-weight:600;">"Square"</b> (has same number of rows as columns),</li>
+								<li>It has <b style="font-weight:600;">'1's</b> on the diagonal and <b style="font-weight:600;">'0's</b> everywhere else.</li>
+								<li>Its symbol is the capital letter <b style="font-weight:600;">I.</b></li>								
+						    </ul>
+
+							<p>The Identity Matrix can be 2×2 in size, or 3×3, 4×4, etc...</p>
+
+							<h1 style="font-size:2vw;">Eigenvalues and Eigenvectors</h1>
+							<p>An eigenvector does not change direction in a transformation is a straightforward illustration.</p>
+							<br>
+							<figure>
+								<img src="images\BLOGS\linear_algebra\13.png" style="position: relative;left:410px;top:-40px;"
+								width="480" 
+								height="230" />		
+								<figcaption style="text-align:center;font-size:1vw;font-style: italic;position: relative;left: 20px;">Figure 13. An Eigen vector </figcaption>								
+						    </figure>
+                            <br>
+							<p>How do we find that vector?
+
+								Eigen is a German term that signifies "own" or "innate," as in being a part of the parent matrix. It is pronounced "eye-gan".
+								
+								Since eigenvectors are unit vectors, their length or magnitude is always equal to one. Right vectors, which simply means a column vector, are a common name for them. The length or magnitude of the eigenvectors is determined by the eigenvalues, which are coefficients applied to the eigenvectors.</p>
+                             
+							<h1 style="font-size:1.8vw;">Eigenvalues in Principal Component Analysis</h1>
+							<p>There is a lot of data involved in machine learning. Programmers will have a field day if there is any way to shrink the data without sacrificing the accurate representation of those values.<br>
+                               PCA, often known as principal component analysis, is used to reduce dimensionality. Finding meaningful features becomes more challenging as datasets grow larger. In order to make the machine learning model more robust, it is therefore necessary to determine whether two variables are correlated with one another.</p>
+							<p>Let's talk about PCA and take a quick look at how it works:</p>
+							<ul>
+								<li>The data must first be centered, which entails removing the average or mean from each attribute. It is now simpler to compute the covariance matrix.</li>
+								<li>The degree to which two variables are dependent or independent of one another is indicated by their covariance.</li>
+                                <li>If Y grows with an increase in X and drops with a reduction in X, two variables, say X and Y, are said to be in positive correlation.</li>							
+							</ul>
+
+							<figure>
+								<img src="images\BLOGS\linear_algebra\14.png" style="position: relative;left:410px;top:-40px;"
+								width="380" 
+								height="320" />		
+								<figcaption style="text-align:center;font-size:1vw;font-style: italic;position: relative;left: 20px;">Figure 14. Illustration of eigen vectors</figcaption>
+						    </figure>
+							<br>
+							<p>Any vector in the feature space can be multiplied by this covariance matrix to produce a vector, the slope of which on repeated multiplications will gradually converge towards the maximum variance. As a result, the dimension with the highest variance in the data is indicated by this multiplication of a random vector with a covariance matrix.<br>
+
+								The need to locate these convergent spots in the data becomes critical. One method is to multiply the covariance matrix with the vectors to see which ones do not turn on.<br>
+								
+								As a result, the vector's range widens without turning. The span is a scalar quantity, and for a given value, there is a vector that doesn't change in a particular way. This perfectly fits the underlying premise of Eigenvectors.</p>
+							
+							<h1 style="font-size:2vw;">Conclusion</h1>
+							<p>Data science and machine learning require the use of linear algebra as a fundamental technique. Beginners who are interested in data science should therefore become familiar with key linear algebra principles.</p>					
+							<p>I wanted to make linear algebra a little more fascinating than you may have previously thought. Thanks for reading this blog.&#128516;</p>                        	
+						</div>
+					</div>
+
+				<!-- Footer -->
+				<footer id="footer">
+					<div class="inner">
+						<section>
+							<h2 style=text-align:center;position:relative;left:220px;font-size:1.6vw>Follow</h2>
+							<ul class="icons" style=text-align:center;position:relative;left:220px;>
+								<li><a href="https://twitter.com/WaghHimanshu" class="icon brands style2 fa-twitter"><span class="label">Twitter</span></a></li>
+								<li><a href="https://www.linkedin.com/in/himanshu-wagh-82ba96141/" class="icon brands style2 fa-linkedin-in"><span class="label">Linkedin</span></a></li>									
+								<li><a href="https://github.com/Himanshuwagh" class="icon brands style2 fa-github"><span class="label">GitHub</span></a></li>									
+								<li><a href= "mailto: waghhimanshu@gmail.com" class="icon solid style2 fa-envelope"><span class="label">Email</span></a></li>
+								<!-- <li><a href="https://medium.com/@waghhimanshu" class="icon brands style2 fa-medium"><span class="label">Medium</span></a></li>									 -->
+							</ul>
+						</section>
+						<ul class="copyright" style=text-align:center;>
+							<li>&copy; Untitled. All rights reserved</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+						</ul>
+					</div>
+				</footer>
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
