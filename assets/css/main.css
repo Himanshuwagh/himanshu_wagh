@@ -165,7 +165,7 @@ input, select, textarea {
     
 		a:hover {
 			border-bottom-color: transparent;
-			color: #e6c60e !important;
+			color: #e6c60e ;
 		}
  
 	.color-me{
@@ -3364,3 +3364,12 @@ input, select, textarea {
 	margin-right: 20px;
 	/* margin-bottom: ; */
   }
+
+.see_more a{
+	color: black;
+}
+
+.see_more a:hover{
+	 color: rgb(218, 103, 15);
+	 transform: scale(1.1); 
+}
