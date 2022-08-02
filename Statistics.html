@@ -1,0 +1,365 @@
+<!DOCTYPE HTML>
+<!--
+	Phantom by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Statistics for Data Science</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<div class="inner">
+
+						
+
+							<!-- Nav -->
+							<nav background="transparent">
+								<ul>
+									<li><a style="font-size: 14px;" href="index.html" class="color-me">Home</a></li>
+									<li><a style="font-size: 14px;" href="blog-station.html" class="color-me">Blogs</a></li>
+									<li><a style="font-size: 14px;" href="FILES\CV-Himanshu Wagh.pdf" download="FILES\CV-Himanshu Wagh.pdf" class="color-me">Resume</a></li>
+									<li><a style="font-size: 14px;" href="project-station.html" class="color-me">Projects</a></li>
+									<li><a style="font-size: 14px;" href="about.html" class="color-me">About Me</a></li>
+								</ul>
+							</nav>
+
+						</div>
+					</header>
+
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+							<h1 style="text-align:center;font-size: 2.5vw;font-family: 'Montserrat', sans-serif;">Fundamentals of Statistics<br><b style="font-size:35px;font-family: 'Montserrat', sans-serif;font-weight: bold;">for Data Science</b></h1>
+							<!-- <span class="image main"><img src="images\blog1.jpg" alt="" /></span> -->
+							<img src="images\BLOGS\statistics\16.jpg" class="blog1"
+									width="600" 
+									height="400" />
+							<p>The last century has seen the majority of statistics' development as a discipline. The mathematical underpinnings of statistics, known as probability theory, were created between the 17th and 19th centuries based on the work of Thomas Bayes, Pierre-Simon Laplace, and Carl Gauss. Statistics is an applied science focused on data analysis and modelling, in contrast to probability's purely theoretical nature. Key concepts of experimental design and maximum likelihood estimation are introduced by contemporary statistics. These and numerous other statistical ideas are mostly hidden in the depths of data science.</p>
+							<p>This blog's main objective is to clarify some key concepts and ideas and to shed light on their significance — or lack thereof — in the context of data science and big data.</p>
+															
+
+							<h1 style=font-size:2vw;text-align:center;>I. Exploratory Data Analysis</h1>
+							<p>EDA, also known as exploratory data analysis, is a relatively recent branch of statistics. Inference, a sometimes difficult set of techniques for making judgments about large populations based on small samples, was the main focus of traditional statistics.<br> 
+								
+								Exploratory data analysis has advanced far beyond its original purpose thanks to the easy availability of computing power and expressive data analysis software. The quick development of new technology, the availability of more and larger data sets, and the increased use of quantitative analysis across a range of disciplines have been major drivers of this field.</p>							
+                            <br>
+
+							<h1 style=font-size:1.8vw;font-weight:normal;><i>Basic concepts in Statistics</i></h1>
+							<h1 style=font-size:1.5vw>1. MEAN</h1>
+							<p>MEAN, or average value, is the most fundamental concept. The mean is calculated by dividing the total number of values by the number of values.<br>
+							<ul style="text-align:center;font-weight: bold;">Consider the following set of numbers: {4 9 1 3}</ul>
+							<ul style="text-align:center;font-weight: bold;">The mean is (4+9+1+3)/4= 17/4 = 4.25</ul>
+							<p>Mean is helpful in a wide variety of real-world situations. For instance, insurance analysts frequently compute the mean age of the people for whom they provide insurance in order to understand the typical age of their clients.</p>
+							<p>You will encounter the symbol x&#772; to represent the mean of a sample from a population (pronounced x-bar). The formula to compute the mean for a set of N values x1, x2, ..., xN is</p>
+							
+							<figure>
+								<img src="images\BLOGS\statistics\4.png" style="position: relative;left: 520px;"
+								width="150" 
+								height="80" />									
+						    </figure>
+							<br>
+                            <p>A weighted mean is a type of mean that is calculated by multiplying each data value, xi, by a weight, wi, and dividing the result by the total of the weights. The weighted mean formula is</p>
+                            
+							<ul style="font-weight: bold;position: relative;left:400px;">Weighted Mean = </ul>
+							<figure>
+								<img src="images\BLOGS\statistics\18.jpg" style="position: relative;left: 580px;top: -105px;"
+								width="190" 
+								height="110" />								
+						    </figure>
+							<p>There are two main motivations for using a weighted mean:</p>								
+							<ul>
+								<li>Some values are inherently more variable than others, and observations with high variability are given less weight. We might downweight the data from a sensor, for instance, if we are averaging readings from several sensors and one of them is less accurate.</li>
+								<li>The various groups that we are interested in measuring are not all fairly represented in the data that was gathered. For instance, we might not have a set of data that accurately represents all user groups due to the way an online experiment was carried out. We can correct that by giving the values from the underrepresented groups more weight.</li>
+							</ul>
+
+							<h1 style="font-size: 1.5vw;">2. MEDIAN</h1>
+							<p>The middle value in a list of data is known as the median. If the number of data values is even, the middle value is the average of the two values that divide the sorted data into the upper and lower halves rather than a value that is actually present in the data set.<br>
+
+								If we take same set of numbers {4 9 1 3}. The sorted set of numbers would be {1 3 4 9}, as the number of data-values, then median would be (3+4)/2 = 3.5. Therefore, the median for {4 9 1 3} would be 3.5.</p>
+								<br>								
+								<figure>
+									<img src="images\BLOGS\statistics\131.png" style="position: relative;left: 430px;top:-40px;"
+									width="350" 
+									height="200" />
+									<figcaption style="text-align:center;font-size:1vw;font-style: italic;position: relative;left:20px;top:-40px">Figure 1. Median of data </figcaption>				
+								</figure>								
+								
+							<p>The median only considers the values in the middle of the sorted data, as opposed to the mean, which takes into account all observations. There are many situations where the median is a better metric than the mean, despite the fact that the mean is much more sensitive to the data.<br>
+								
+								Let's say that we want to examine the average household incomes in Seattle neighbourhoods near Lake Washington. Because Bill Gates resides in Medina, using the mean to compare that neighbourhood to Windermere would result in very different findings. No matter how wealthy Bill Gates is, the middle observation will always be in the same place if we use the median.<br>
+								
+								It is possible to compute a weighted median for the same purposes as when using a weighted mean. We start by sorting the data, just like with the median, but each data value has a corresponding weight. The weighted median is the value such that the sum of the weights for the lower and upper halves of the sorted list is equal, as opposed to taking the middle number. The weighted median is resilient to outliers, just like the median.</p>
+							
+							<h1 style="font-size: 1.5vw;">3. OUTLIERS</h1>
+
+							<p>Any value that differs significantly from the other values in a dataset is an outlier. Although certain conventions are employed in various data summaries and plots, the precise definition of an outlier is somewhat subjective.</p>
+							<figure>
+								<img src="images\BLOGS\statistics\14.jpg" style="position: relative;left: 440px;top:-40px;"
+								width="350" 
+								height="230" />
+								<figcaption style="text-align:center;font-size:1vw;font-style:italic;position:relative;top:-40px;right:-20px;">Figure 2. Outliers</figcaption>				
+						    </figure>
+
+							<p>Being an outlier alone does not render a data value false or invalid (as in the example above with Bill Gates). However, outliers are frequently the result of data errors, such as combining data in different units (such as kilometres and metres), or inaccurate sensor readings.
+
+								The mean will produce a poor estimate when outliers are the result of bad data, but the median will still be accurate. In any case, it is important to recognise outliers because they frequently merit further examination.</p>
+                                
+							<h1 style="font-size: 1.5vw;">4. MODE</h1>
+							<p>The value—or values, in the event of a tie—that appears most frequently in the data is the mode.</p>
+							<br>
+							<figure>
+								<img src="images\BLOGS\statistics\17.png" style="position: relative;left:420px;top:-40px;"
+								width="400" 
+								height="150" />
+								<figcaption style="text-align:center;font-size:1vw;font-style:italic;position:relative;top:-40px;right:-20px;">Figure 3. Mode</figcaption>				
+						    </figure>							
+                            <p>For instance, "Inbound" is the mode of the delay at the Dallas/Fort Worth airport. Another illustration is that the predominant religion in most of the United States is Christianity. The mode is a straightforward summary statistic that is typically used with categorical data and not with numerical data.</p>
+
+							<h1 style="font-size: 1.5vw;">5. STANDARD DEVIATION and VARIANCE</h1>
+							<p>The most widely used estimates of variation are based on the the differences, or deviations, between the variables like mean/median and the observed data. For a set of data {1, 4, 4}, the mean is 3 and the median is 4. The deviations from the mean are the differences: </p>
+							<ul style="text-align:center;font-weight: bold;">1 - 3 = - 2,</ul>
+							<ul style="text-align:center;font-weight: bold;">4 - 3 = 1,</ul>
+							<ul style="text-align:center;font-weight: bold;">4 - 3 = 1</ul>
+							<p>These variations demonstrate how spread out the data is relative to the central value. Trying to estimate a typical value for these deviations is one method of measuring variability. The average deviations by themselves would not provide much information. Positive deviations are balanced by negative ones. In actuality, the sum of the standard deviations is exactly zero. Taking the average of the absolute values of the deviations from the mean is a more straightforward strategy. The deviations in the example above have an absolute value of 2 1 1 and an average value of (2+1+1)/3, or 1.33. This is calculated using the formula and is known as the mean absolute deviation.</p>
+							<br>
+							<figure>
+								<img src="images\BLOGS\statistics\8.jpg" style="position: relative;left:420px;top:-40px;"
+								width="400" 
+								height="150" />
+								<figcaption style="text-align:center;font-size:1vw;font-style:italic;position:relative;top:-40px;right:-30px;">Figure 4. Mean absolute deviation</figcaption>				
+						    </figure>	
+							<p>x is the sample mean where,<br>
+								The variance and the standard deviation are the two most widely used estimates of variability.
+								which use squared deviations as their basis. An average of the squared is the variance.
+								deviations, where the square root of the variance represents the standard deviation.</p>
+                            <br>
+							<figure>
+									<img src="images\BLOGS\statistics\7.jpg" style="position: relative;left:420px;top:-40px;"
+									width="400" 
+									height="150" />
+									<figcaption style="text-align:center;font-size:1vw;font-style:italic;position:relative;top:-40px;right:-30px;">Figure 5. Formulae of Mean, Variance, Standard Deviation</figcaption>				
+							</figure>	
+							<p>Given that it is on the same scale as the original data, the standard deviation is much simpler to interpret than the variance. Even so, it may seem odd that the standard deviation is preferred in statistics over the mean absolute deviation given its more challenging and illogical formula. Its dominance can be attributed to statistical theory because, mathematically speaking, working with squared values is much more practical than working with absolute values, particularly for statistical models.</p>
+							<p>The variance, standard deviation, and mean absolute deviation are all susceptible to outliers and extremely high or low values. Since they are based on the squared deviations, the variance and standard deviation are particularly susceptible to outliers. The median absolute deviation from the median, is used as a reliable indicator of variability, sometimes known as MAD:</p>
+							<br>
+							<figure>
+								<img src="images\BLOGS\statistics\111.png" style="position: relative;left:470px;top:-40px;"
+								width="300" 
+								height="80" />							
+						    </figure>	
+							<p>where m is the median. Like the median, the MAD is not influenced by extreme values.</p>
+							<p>Even when the data comes from a normal distribution, the variance, standard deviation, mean absolute deviation, and median absolute deviation from the median are not equivalent estimates. In actuality, the standard deviation is consistently higher than both the mean absolute deviation and the median absolute deviation, which are both higher than the mean. The standard deviation in the case of a normal distribution is placed on a par with the median absolute deviation (MAD) when it is multiplied by a factor of 1.4826.</p>
+							
+							<h1 style="font-size: 1.5vw;">6. PERCENTILES</h1>
+							<p>An alternative method of estimating dispersion is based on examining the distribution of the sorted data. Order statistics are statistics that are based on sorted (ranked) data.
+								The range, or the difference between the largest and smallest number, is the simplest measurement. The minimum and maximum values are useful to know and aid in the detection of outliers, but the range is very susceptible to outliers and isn't very helpful as a general indicator of data dispersion. The percentile is essentially the same as a quantile, with quantiles indexed by fractions (so the .8 quantile is the same as the 80th percentile).</p>
+							<figure>
+									<img src="images\BLOGS\statistics\12.png" style="position: relative;left:360px;top:-40px;"
+									width="480" 
+									height="500" />
+									<figcaption style="text-align:center;font-size:1vw;font-style:italic;position:relative;top:-100px;right:-40px;">Figure 6. Percentile in histogram chart</figcaption>				
+							</figure>
+							<p>After removing values from either end of the range, we can examine the data range to reduce the sensitivity to outliers. Formally, the basis for these kinds of estimates is the variation in percentiles. The P-th percentile in a dataset is the value at which at least P percent of the values fall within this range or below it, and at least (100-P) percent of the values fall within this range or above it. Sort the data, for instance, to find the 80th percentile.<br>
+								Next, work your way up to the largest value by starting with the smallest value and going 80% of the way there. Remember that the 50th percentile and the median are the same thing.</p>
+							<figure>
+									<img src="images\BLOGS\statistics\5.png" style="position: relative;left:450px;top:-40px;"
+									width="350" 
+									height="180" />
+									<figcaption style="text-align:center;font-size:1vw;font-style:italic;position:relative;top:-40px;right:-40px;">Figure 7. Outliers using IQR</figcaption>				
+							</figure>
+							<p>The distance between the 25th and 75th percentiles, or the interquartile range, is a commonly used indicator of variability (or IQR). Here is a short example: 3, 1, 5, 3, 6, 7 and 2. We group these into 1,2,3,3,5,6,7, and 9. 6.5 - 2.5 = 4 is the interquartile range because the 25th percentile is at 2.5 and the 75th percentile is at 6.5. Software can use slightly different methodologies that produce various results. These variations are typically smaller.<br>
+								Since sorting all the data values is required, calculating exact percentiles can be computationally very expensive for very large datasets.</p>
+
+							<h1 style="font-size: 1.5vw;">7. EXPECTED VALUES</h1>
+							<p>Data with discrete values on the same scale that the categories represent or can be mapped to are a special type of categorical data. For instance, a marketer for a new cloud technology provides two service tiers, one priced at $300/month and the other at $50/month. To generate leads, the marketer hosts free webinars. According to the company's estimates, 5% of attendees will sign up for the $300 service, 15% for the $50 service, and 80% won't sign up for anything. For financial purposes, these data can be combined into a single "expected value," which is a type of weighted mean where the weights are probabilities.<br>
+								The expected value is calculated as follows</p>
+							<ul>
+									<li>Multiply each outcome by its probability of occurring.</li>
+									<li>Sum these values.<br>
+										In the cloud service example, the expected value of a webinar attendee is thus $22.50
+										per month, calculated as follows:<br>
+										<ul style="text-align:center;">EV = 0.05 * 300 + 0.15 * 50 + 0.80 * 0 = 22.5</ul>
+										The expected value is essentially a weighted mean in that it incorporates the concepts of potential outcomes and probability weights, frequently based on individual judgement. A key idea in business valuation and capital budgeting is expected value. Examples include the expected value of five years' worth of profits from a new purchase or the anticipated cost savings from new patient management software at a clinic.</li>
+							</ul>
+
+							<h1 style="font-size: 1.5vw;">8. CORRELATION</h1>
+							<p>Examining correlation between predictors and between predictors and a target variable is a key component of exploratory data analysis in many modelling projects (whether in data science or in research). When high values of X correlate positively with high values of Y and low values of X correlate negatively with low values of Y, the variables X and Y (each with measured data) are said to be positively correlated. The variables are negatively correlated if high values of X are accompanied by low values of Y, and vice versa.</p>
+							<p><b>Correlation coefficient</b></p>
+							<p>A metric that measures the extent to which numeric variables are associated with one another (ranges from -1 to +1).</p>
+							<br>
+							<figure>
+								<img src="images\BLOGS\statistics\10.png" style="position: relative;left:350px;top:-40px;"
+								width="550" 
+								height="230" />
+								<figcaption style="text-align:center;font-size:1vw;font-style:italic;position:relative;top:-40px;right:-40px;">Figure 7. Correlation co-efficient</figcaption>				
+						    </figure>
+
+							<p><b>Correlation matrix</b></p>
+							<p>A table where the variables are shown on both rows and columns, and the cell values are the correlations between the variables.</p>
+							<br>
+							<figure>
+								<img src="images\BLOGS\statistics\11.png" style="position: relative;left:350px;top:-40px;"
+								width="550" 
+								height="430" />
+								<figcaption style="text-align:center;font-size:1vw;font-style:italic;position:relative;top:-40px;right:-40px;">Figure 8. Correlation matrix</figcaption>				
+						    </figure>
+
+							<p>The correlation coefficient, a standardised variation that provides an estimation of the correlation between two variables and always lies on the same scale, is more helpful. To calculate Pearson's correlation coefficient, multiply the variances for variables 1 and 2 and divide the result by the sum of their standard deviations:<br>
+
+								The perfect correlation coefficient ranges from +1 (perfect positive correlation) to -1 (perfect negative correlation); a correlation coefficient of 0 means there is none.<br>
+								
+								Although a correlation coefficient of 0 means there is none, it should be noted that random arrangements of data can result in both positive and negative correlation coefficient values.</p>
+
+							<h1 style="font-size: 2vw;text-align:center;">II. DATA and SAMPLING DISTRIBUTIONS</h1>
+							<p>One common misconception is that sampling is no longer necessary in the age of big data. In fact, the abundance of data of varying quality and relevance only serves to highlight the need for sampling as a tool for handling a variety of data effectively while minimising bias.<br>
+
+								Predictive models are typically created and tested on samples, even in big data projects. Additionally, samples are used in a variety of tests (such as pricing and web treatments).</p>
+							<figure>
+									<img src="images\BLOGS\statistics\1.png" style="position: relative;left:350px;top:-40px;"
+									width="500" 
+									height="400" />
+									<figcaption style="text-align:center;font-size:1vw;font-style:italic;position:relative;top:-40px;right:-10px;">Figure 9. Popluation vs Sample</figcaption>				
+							</figure>
+
+							<p>The left-hand side represents a population which, in statistics, is assumed to follow an
+								underlying but unknown distribution. The only thing available is the sample data,
+								and its empirical distribution, shown on the right-hand side. To get from the left-hand side to the right-hand side, a sampling procedure is used represented by red-dash arrows. Traditional statistics focused very much on the left-hand side, using theory based on strong assumptions about the population. Modern statistics has moved to the right-hand side where such assumptions are not needed.<br><br>
+								Data scientists should generally not be concerned with the theoretical aspects of the left-hand side and should instead concentrate on the sampling techniques and the available data. A few notable exceptions exist. Data can occasionally be produced by a physically observable process that is modelable. Flipping a coin is the most basic example and it has a binomial distribution. In these situations, our knowledge of the population can help us learn more.</p>
+							<p style="font-weight:bold;font-size:1.5vw;">1. Random sampling and sample bias</p>
+							<p>A sample is a subset of data taken from a larger dataset known as the population by statisticians. A population in statistics is different from a population in biology; it is a sizable, well-defined but occasionally theoretical or fictitious set of data.</p>
+							
+							<br>
+							<figure>
+								<img src="images\BLOGS\statistics\13.png" style="position: relative;left:420px;top:-40px;"
+								width="380" 
+								height="300" />
+								<figcaption style="text-align:center;font-size:1vw;font-style:italic;position:relative;top:-40px;right:-20px;">Figure 10. Population and Sample</figcaption>				
+						    </figure>
+
+							<p style="font-weight:bold;font-size:1.3vw;">Key Terms for Random Sampling</p>
+							
+							<p>Every available member of the population being sampled has an equal chance of being selected for the sample at each draw in a process known as random sampling. A simple random sample is the one that results. Replacement sampling involves returning observations to the population after each draw for potential reselection in the future. Alternately, it can be done without replacement, but then selected observations cannot be used in subsequent draws.</p>
+							<br>
+							<figure>
+								<img src="images\BLOGS\statistics\19.png" style="position: relative;left:400px;top:-40px;"
+								width="450" 
+								height="350" />
+								<figcaption style="text-align:center;font-size:1vw;font-style:italic;position:relative;top:-40px;right:-40px;">Figure 11. Random Sampling</figcaption>				
+						    </figure>
+
+							<p>When creating an estimate or a model based on a sample, data quality frequently matters more than data quantity. Completeness, format consistency, cleanliness, and accuracy of individual data points are all aspects of data quality in data science. The concept of representativeness is added by statistics.<br>
+
+								The famous instance is the 1936 Literary Digest poll, which predicted that Al Landon would defeat Franklin Roosevelt. Leading publication of the time, The Literary Digest, conducted a poll of its entire subscriber base as well as additional lists of people, totaling over 10 million, and predicted a resounding victory for Landon. In just 2000, George Gallup, the company's founder, conducted biweekly polls and correctly called Roosevelt's victory. The choice of those surveyed made a difference.<br>
+								
+								The Literary Digest chose quantity over selection, giving it little thought. They ultimately surveyed people who had a relatively high socioeconomic status (including their own subscribers and people who appeared on marketers' lists because they owned luxury items like phones and cars). The end result was sample bias, meaning that the sample did not accurately reflect the larger population it was intended to represent. The word "non-random" is crucial because very few samples, even random samples, will perfectly represent the population. When the difference is significant, sample bias occurs and is likely to persist in subsequent samples taken from the same population as the initial sample.</p>
+
+							<h1 style="font-size: 1.5vw;">2. NORMAL DISTRIBUTION</h1>
+							<p>Data can be "distributed" (spread out) in different ways. </p>
+							<br>
+							<figure>
+								<img src="images\BLOGS\statistics\2.png" style="position: relative;left:380px;top:-40px;"
+								width="480" 
+								height="400" />
+								<figcaption style="text-align:center;font-size:1vw;font-style:italic;position:relative;top:-40px;right:-40px;">Figure 12. Data distribution</figcaption>												
+						    </figure>
+
+							<p>But there are many cases where the data tends to be around a central value with no bias left or right, and it gets close to a "Normal Distribution" like this:</p>
+							<br>
+							<figure>
+								<img src="images\BLOGS\statistics\3.png" style="position: relative;left:400px;top:-40px;"
+								width="450" 
+								height="400" />
+								<figcaption style="text-align:center;font-size:1vw;font-style:italic;position:relative;top:-40px;right:-40px;">Figure 13. Normal distribution</figcaption>												
+						    </figure>
+
+							<p>In conventional statistics, the bell-shaped normal distribution is recognizable. The fact that sample statistics distributions frequently have a normal shape gave mathematicians a useful tool for creating formulas that roughly approximate these distributions.<br>
+
+                               68% of the data in a normal distribution are within one standard deviation of the mean, and 95 % are within two.</p>
+							<br>
+							<figure>
+								   <img src="images\BLOGS\statistics\9.png" style="position: relative;left:400px;top:-40px;"
+								   width="450" 
+								   height="250" />
+								   <figcaption style="text-align:center;font-size:1vw;font-style:italic;position:relative;top:-40px;right:-40px;">Figure 14. Data in normal distribution</figcaption>												
+							</figure>
+
+                            <p style="font-weight:bold;">Many things closely follow a Normal Distribution:</p>
+							<ul>
+								<li>heights of people</li>
+								<li>size of things produced by machines</li>
+								<li>errors in measurements</li>
+								<li>blood pressure</li>
+								<li>marks on a test</li>																					
+							</ul>
+
+							<blockquote style="font-weight:normal;font-size:120%;">In honour of the outstanding German mathematician from the late 18th and early 19th centuries, Carl Friedrich Gauss, the normal distribution is also known as a Gaussian distribution. The "error" distribution was another name for the normal distribution in the past. The difference between an actual value and a statistical estimate, such as the sample mean, is known statistically as an error.</blockquote>
+
+							<p style="font-weight:bold;">The Normal Distribution has:</p>
+							<ul>
+								<li>mean = median = mode</li>
+								<li>symmetry about the center</li>
+								<li>50% of values less than the mean and 50% greater than the mean</li>																					
+							</ul>
+
+							<h1 style="font-size: 1.5vw;">3. CENTRAL LIMIT THEOREM</h1>
+							<p>One of the fundamental theorems in statistics is the Central Limit Theorem (CLT), and the good news is that it's a fairly straightforward idea as you'll see as you read more.<br><br>
+
+								Before reading any further, you must comprehend the fundamental idea of normal distributions and why they are so crucial.<br><br>
+								
+								According to the central limit theorem in statistics, regardless of how a variable is distributed in the [population] the sampling distribution of the mean for a variable will resemble a normal distribution given a sufficiently large [sample]<br><br>
+								
+								Since confidence intervals and hypothesis tests, which take up half the page in such texts, are built on the Central Limit Theorem, it is given a lot of attention in traditional statistics texts.<br><br>
+								
+								The Central Limit Theorem should be understood by data scientists, but since the use of formal hypothesis tests, confidence intervals, and the bootstrap is always an option, the Central Limit Theorem is not as essential to data science practice.</p>
+
+							<h1 style="font-size: 1.8vw;text-align: center;">CONCLUSION</h1>
+							<p>Statistics laid the groundwork for the field of data science with the advent of exploratory data analysis (EDA). The fundamental tenet of EDA is that data analysis is the first and most crucial step in any project based on data. You can develop critical insight and project understanding by condensing and visualizing the data.<br><br>
+								This blog has reviewed a number of ideas, from straightforward metrics to visual representations that explore the relationships between various variables.<br><br>
+								
+								The principles of random sampling still hold true in the age of big data when precise estimates are required. We can measure the potential error in an estimate that might be caused by random variation by having a thorough understanding of the various sampling and data generating distributions.</p>
+							<p>Thanks for reading this blog.&#128516;</p>
+	
+
+
+						</div>
+					</div>
+
+				<!-- Footer -->
+				<footer id="footer">
+					<div class="inner">
+						<section>
+							<h2 style=text-align:center;position:relative;left:220px;font-size:1.6vw>Follow</h2>
+							<ul class="icons" style=text-align:center;position:relative;left:220px;>
+								<li><a href="https://twitter.com/WaghHimanshu" class="icon brands style2 fa-twitter"><span class="label">Twitter</span></a></li>
+								<li><a href="https://www.linkedin.com/in/himanshu-wagh-82ba96141/" class="icon brands style2 fa-linkedin-in"><span class="label">Linkedin</span></a></li>									
+								<li><a href="https://github.com/Himanshuwagh" class="icon brands style2 fa-github"><span class="label">GitHub</span></a></li>									
+								<li><a href= "mailto: waghhimanshu@gmail.com" class="icon solid style2 fa-envelope"><span class="label">Email</span></a></li>
+								<!-- <li><a href="https://medium.com/@waghhimanshu" class="icon brands style2 fa-medium"><span class="label">Medium</span></a></li>									 -->
+							</ul>
+						</section>
+						<ul class="copyright" style=text-align:center;>
+							<li>&copy; Untitled. All rights reserved</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+						</ul>
+					</div>
+				</footer>
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
