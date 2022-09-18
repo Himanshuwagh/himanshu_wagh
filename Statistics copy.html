@@ -1,0 +1,362 @@
+<!DOCTYPE HTML>
+<!--
+	Phantom by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Comprehensive guide to YOLO family</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<div class="inner">
+
+						
+
+							<!-- Nav -->
+							<nav background="transparent">
+								<ul>
+									<li><a style="font-size: 14px;" href="index.html" class="color-me">Home</a></li>
+									<li><a style="font-size: 14px;" href="blog-station.html" class="color-me">Blogs</a></li>
+									<li><a style="font-size: 14px;" href="FILES\CV-Himanshu Wagh.pdf" download="FILES\CV-Himanshu Wagh.pdf" class="color-me">Resume</a></li>
+									<li><a style="font-size: 14px;" href="project-station.html" class="color-me">Projects</a></li>
+									<li><a style="font-size: 14px;" href="about.html" class="color-me">About Me</a></li>
+								</ul>
+							</nav>
+
+						</div>
+					</header>
+
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+							<h1 style="text-align:center;font-size: 2.5vw;font-family: 'Montserrat', sans-serif;">The Evolution and Development of YOLO<br></h1>
+							
+							<img src="images\BLOGS\img1.gif" class="blog1"
+									width="600" 
+									height="400" />
+							<p>One of the many fascinating uses for "convolutional neural networks" is "image classification."
+								There are many fascinating issues in computer vision besides straightforward image classification, with object detection being one of the most intriguing.						
+								<br>An efficient algorithm for real-time object recognition is YOLO ("You Only Look Once"). Our primary goals in writing this article are to introduce the idea of object detection, the YOLO algorithm, and to describe the variations among the YOLO family of models.</p>
+		
+															
+
+							<h1 style=font-size:2vw;text-align:center;>I. History</h1>
+							<p>Although computer vision has made significant progress, it is still difficult for it to match the accuracy of human perception. But it's always encouraging to gauge our progress. Only a few years ago, object detection, the process of identifying and detecting an unknown number of distinct objects within an image, was thought to be an extremely challenging problem.<br></p>							
+							<p>1. <span style="font-weight:bold">Viola Jones Detectors :</span> This object recognition framework, created in 2001 by Paul Viola and Michael Jones, enables the real-time detection of human faces.<br>
+								2. <span style="font-weight:bold">HOG Detector :</span> Hog is an improvement of the scale invariant feature transform and shape contexts of its time, and was first proposed in 2005 by N. Dalal and B. Triggs.</p>
+							<h1 style=font-size:1.6vw;font-weight:bold;>Deep Learning Era</h1>
+							<p>Unfortunately, after 2010, as the performance of hand-crafted features grew saturated, object detection reached a plateau. Convolutional neural networks, however, made a comeback in 2012, and deep convolutional networks were successful at learning reliable and sophisticated feature representations of an image.</p>
+							<p>1. <span style="font-weight:bold">RCNN :</span> The most popular models for object detection were RCNN models. Even though the RCNN family of models (Fast RCNN and Faster RCNN) were accurate, they were relatively slow because it took several steps to find the suggested region for the bounding box, classify these regions, and then refine the output through post-processing.<br>
+								2. <span style="font-weight:bold">SPPNet, Feature Pyramid Networks(FPN) :</span> The drawback of <a href="https://arxiv.org/abs/1406.4729v4" style="color:rgb(0, 30, 179)"><i>SPPNet</i></a> was that it still required multi-stage training and that this model only improved its fully connected layers while ignoring all earlier layers.
+								<a href="https://arxiv.org/abs/1612.03144" style="color:rgb(0, 30, 179)"><i>Feature Pyramid Networks</i></a> were proposed by T.-Y. Lin et al. in 2017. A closer look at Faster RCNN reveals that it struggles to detect most small objects in the image. To fix this, images can be scaled to various sizes and sent to the network using a straightforward image pyramid.</p>
+								
+
+							<h1 style=font-size:2vw;text-align:center;>II.  YOLO</h1>
+							
+							<figure>
+								<img src="images\BLOGS\YOLO\img2.png" style="position: relative;left: 300px;"
+								width="50%" 
+								height="50%" />		
+								<figcaption style="text-align:center;font-size:1vw;font-style: italic;position: relative;left:10px;top:-40px">Figure 1. Timeline of Yolo family models</figcaption>
+						    </figure>
+							
+							<p>RCNN models were the most popular models for object detection at the time. Although the RCNN family of models was accurate, it was relatively slow due to the multi-step process of locating the proposed region for the bounding box, classification on these regions, and finally post-processing to refine the output.<br><br>
+                               As for every ML-based model precision and recall are very important to deduce and judge its accuracy and robustness. Thus the creator of YOLO kept tried to come up with the object detection model that maximizes mAP (mean average precision).<br><br>					
+								Besides this, the architecture of all the YOLO models have a similar theme of components as outlined below –<br>
+
+							<figure>
+									<img src="images\BLOGS\YOLO\img3.jpg" style="position: relative;left: 170px;"
+									width="70%" 
+									height="70%" />
+									<figcaption style="text-align:center;font-size:1vw;font-style: italic;position: relative;left:10px;top:0px">Figure 2. Template architecture of Yolo model</figcaption>							
+							</figure>
+							<br>
+
+							<p>1. <span style="font-weight:bold">Backbone: </span>A convolutional artificial neural network that gathers and generates visual features of various sizes and shapes ResNet, VGG, and EfficientNet are a few examples of models that are used as feature extractors.<br><br>
+								2. <span style="font-weight:bold">Neck : </span>A group of layers known as the "neck" that combine and blend characteristics before sending them to the prediction layer Examples include the Bi-FPN 3, Path Aggregation Network (PAN), and Feature Pyramid Network (FPN).<br><br>
+								3. <span style="font-weight:bold">Head :</span> combines the predictions from the bounding box with features from the neck. completes the detection process by applying classification and regression to the features and bounding box coordinates. produces 4 values, usually width and height along with x and y coordinates.</p>
+                            
+							<h1 style=font-size:2vw;text-align:center;>II. A  <BR> YOLO-v1</h1>
+							<p>The first YOLO model was introduced by Joseph Redmon et al. in their 2015 paper titled <a href="https://arxiv.org/abs/1506.02640v5" style="color:rgb(0, 30, 179)"><i>"You Only Look Once: Unified, Real-Time Object Detection".</i></a><br>
+								You merely glance once <a href="https://www.kaggle.com/datasets/gopalbhattrai/pascal-voc-2012-dataset" style="color:rgb(0, 30, 179)"><i>The Pascal VOC 2012</i></a> dataset uses a system called (YOLO) to identify objects. It can recognise 20 object classes in Pascal:</p>
+                            <ul>
+								<li>person</li>
+								<li>bird, cat, cow, dog, horse, sheep</li>
+								<li>aeroplane, bicycle, boat, bus, car, motorbike, train</li>
+								<li>bottle, chair, dining table, potted plant, sofa, tv/monitor</li>
+							</ul>
+                            
+							<figure>
+								<img src="images\BLOGS\YOLO\img4.png" style="position: relative;left: 240px;"
+								width="60%" 
+								height="60%" />
+								<figcaption style="text-align:center;font-size:1vw;font-style: italic;position: relative;left:10px;top:0px">Figure 3. YOLO CNN</figcaption>
+							</figure>
+
+							<p>All previous detection systems reuse classifiers or localizers to carry out detection. They use the model to alter the scale and location of an image. Image regions with high scores are referred to as detections.</p>
+							<p>This algorithm takes a completely different approach.</p>
+																
+							<ul>
+								<li>The entire image is processed by one neural network.</li>
+								<li>Using a N x N grid, this network divides the image into regions. A grid cell is designated for object detection if the object's centre falls within it. Bounding boxes and probabilities are then projected for each.</li>
+								<li>The confidence score indicates the likelihood that an object is present in a bounding box (not a category).</li>
+								<li>Each bounding box therefore contains 5 predictions: x, y, w, h, and confidence score, where (x, y) are relative to grid cells and (w, h) are relative to the entire image.</li>																							
+							</ul>
+
+							<figure>
+								<img src="images\BLOGS\YOLO\img5.png" style="position: relative;left: 260px;"
+								width="65%" 
+								height="65%" />
+								<figcaption style="text-align:center;font-size:1vw;font-style: italic;position: relative;left:20px;top:0px">Figure 4. Probability and bounding box</figcaption>				
+							</figure>
+							<br>
+
+							<figure>
+								<img src="images\BLOGS\YOLO\img6.png" style="position: relative;left: 240px;"
+								width="65%" 
+								height="65%" />
+								<figcaption style="text-align:center;font-size:1vw;font-style: italic;position: relative;left:20px;top:0px">Figure 5. Yolo-v1 results on Picasso dataset</figcaption>				
+							</figure>
+							<br>
+
+                            <p><span style="font-weight:bold;font-size: 1.3vw;">Results :</span><br>
+							With an inference speed of 45 frames per second, YOLOv1 had a 63.4 mAP (22ms per image). It was significantly faster than the RCNN family at the time, whose inference rates ranged from 143 ms to 20 s.</p>
+
+							<figure>
+								<img src="images\BLOGS\YOLO\img7.png" style="position: relative;left: 355px;"
+								width="40%" 
+								height="40%" />
+								<figcaption style="text-align:center;font-size:1vw;font-style: italic;position: relative;left:20px;top:0px">Figure 6. mAP of YOLO and R-CNN </figcaption>	
+							</figure>
+							<br>
+
+							<figure>
+								<img src="images\BLOGS\YOLO\img8.png" style="position: relative;left: 220px;"
+								width="65%" 
+								height="65%" />
+								<figcaption style="text-align:center;font-size:1vw;font-style: italic;position: relative;left:20px;top:0px">Figure 7. Bounding boxes on sample images</figcaption>	
+							</figure>
+							<br>
+								
+							<h1 style=font-size:2vw;text-align:center;>II. B  <BR> YOLO-v2</h1>
+
+							<p>Joseph Redmon and Ali Farhadi published YOLOv2 in their paper titled <a href="https://arxiv.org/abs/1612.08242" style="color:rgb(0, 30, 179)"><i>"YOLO9000:Better, Faster, Stronger"</i></a>  in 2016. Standard detection datasets like PASCAL VOC and MS COCO were used to train YOLOv2.<br>
+								Over 9000 different object categories could be detected by YOLOv2. Compared to the previous version, YOLOv1, this version had a number of improvements.<br></p>
+							<p>The other main driving force was to address YOLOv1's problems. Principal problems included:
+							<ul>
+								<li>Finding small objects in groups - The localization error: YOLO has more difficulty correctly localising objects than Fast R-CNN.</li>
+							</ul></p>
+							<p>Let’s now look at the components that made YOLOv2 perform Better:</p>
+							
+							<ul>
+								<li><span style="font-weight:bold">Batch Normalization :</span> According to the "batch norm" theory, clean data is the best condition for neural network layers to function. The input to a layer should ideally have a variance of no more than a few and an average value of 0.<br>
+								This method prevents the data from degrading as it travels through the network, which significantly improves the performance of neural networks. Anyone who has done any machine learning should be able to relate to this because we frequently use a method called "feature scaling" or "whitening" on our input data to accomplish this.<br>
+								Here is a histogram of the output of the first convolution layer without and with batch normalisation to give you an idea of the impact of the batch norm:</p></li>
+							</ul>
+
+							<figure>
+								<img src="images\BLOGS\YOLO\img9.png" style="position: relative;left: 270px;"
+								width="55%" 
+								height="70%" />
+								<figcaption style="text-align:center;font-size:1vw;font-style: italic;position: relative;left:20px;top:0px">Figure 8. Batch Normalization </figcaption>				
+							</figure>
+
+							<ul>
+								<li><span style="font-weight:bold">High Resolution classifier :</span>
+									<ul>
+									    <li>Following 224224 image training, YOLOv2 uses 448448 images to fine-tune the classification network over the course of 10 epochs on ImageNet.</li>
+									    <li>As a result, mAP increased by 4%.</li>
+									</ul>
+								<li><span style="font-weight:bold">Convolution with anchor boxes : </span>A group of predetermined bounding boxes with a specific height and width are known as anchor boxes. These boxes are typically selected based on object sizes in your training datasets and are defined to capture the scale and aspect ratio of specific object classes you want to detect.</li>
+							</ul>
+
+							<figure>
+								<img src="images\BLOGS\YOLO\img10.png" style="position: relative;left: 465px;"
+								width="25%" 
+								height="25%" />
+								<figcaption style="text-align:center;font-size:1vw;font-style: italic;position: relative;left:20px;top:0px">Figure 9. Anchor Boxes </figcaption>				
+							</figure>
+
+							<ol>
+								<li>YOLOv2 eliminates all fully connected layers and forecasts bounding boxes using anchor boxes.</li>
+								<li>The output resolution is raised by removing one pooling layer.</li>
+								<li>Additionally, 416 x 416 images are now used to train the detection network.</li>
+								<li>The output of the feature map is 13 by 13, or 32 times downscaled.</li>
+								<li>The intermediate model had a mAP of 69.5% and a recall of 81% without anchor boxes.</li>
+								<li>With anchor boxes, mAP is 69.2% and recall is 88%. Even though mAP is slightly reduced, recall is increased significantly.</li><br>
+							</ol>
+							<ul>
+								<li><span style="font-weight:bold">Dimension Clusters :</span> When using anchor boxes with YOLO, we run into two problems. The first is that the box's measurements were chosen by hand. The network can learn to adjust the boxes appropriately, but we can make it simpler for the network to learn to predict accurate detections if we choose better priors for it to start with.								</li>
+							</ul>
+
+							<figure>
+								<img src="images\BLOGS\YOLO\img11.png" style="position: relative;left: 360px;"
+								width="40%" 
+								height="40%" />
+								<figcaption style="text-align:center;font-size:1vw;font-style: italic;position: relative;left:20px;top:0px">Figure 10. Dimension Clusters </figcaption>				
+							</figure>
+
+							<p>We use k-means clustering on the bounding boxes of the training set to automatically find good priors rather than selecting them manually.
+								When Euclidean distance is used with standard k-means, larger boxes produce more error than smaller boxes. But what we really want—and this is unrelated to box size—are priors that result in high IOU scores. Therefore, we use 1 - IOU as our distance metric (box, centroid)</p>
+							
+							<p style="font-weight:bold;"><i>Up until now, we've talked about how YOLOv2 uses a number of techniques to improve object detection accuracy. What about the speed, though?</i></p>
+
+							<p><a href="https://paperswithcode.com/method/vgg" style="color:rgb(0, 30, 179)"><i>VGG-16</i></a> has been the standard feature extractor for most detection frameworks; while it is a reliable and accurate image classification network, a single forward pass at image resolution necessitates a staggering number of floating-point operations (30.95 billion FLOPs).
+								Yolov2 uses the <a href="https://arxiv.org/abs/1612.08242v1" style="color:rgb(0, 30, 179)"><i>DARKNET-19</i></a>, a new classification architecture that was proposed as the foundation for object detection, in contrast. It primarily employs 33 filters and doubles the number of channels following each pooling step, similar to VGG models. In order to regularise the model batch, Batch Normalization is used to stabilise training, accelerate convergence.</p>
+							
+							<p><span style="font-weight:bold;font-size: 1.3vw;">Results :</span><br>
+                            78.6 mAP were recorded by YOLOv2 on the VOC 2012 dataset. It outperformed other object detection models on the VOC 2012 dataset.</p>
+
+							<h1 style=font-size:2vw;text-align:center;>II. C  <BR> YOLO-v3</h1>
+
+							<p>In their paper, Joseph Redmon and Ali Farhadi introduced the third version of <a href="https://arxiv.org/abs/1804.02767v1" style="color:rgb(0, 30, 179)"><i>YOLOv3</i></a> in 2018. Yolo version 3: A Slight Improvement Although slightly larger than the earlier models, this one was still adequate in terms of speed and accuracy.<br>
+							Additionally, YOLOv3 employs <span style='font-weight:bold;'>logistic regression</span> to predict an object-ness score (confidence) for each bounding box.<br>
+							If the bounding box prior overlaps a ground truth object more than any other bounding box prior, this value should be 1.</p>
+
+							<figure>
+								<img src="images\BLOGS\YOLO\img12.png" style="position: relative;left: 300px;"
+								width="50%" 
+								height="50%" />
+								<figcaption style="text-align:center;font-size:1vw;font-style: italic;position: relative;left:5px;top:0px">Figure 11. Bounding boxes ofr YOLO-v3 </figcaption>				
+							</figure>
+
+							<p>For instance, prior 1 has the highest IOU and overlaps the first ground truth object the most of any bounding box prior, while prior 2 has the highest IOU and overlaps the second ground truth object the most of any bounding box prior. Each ground truth object receives only one bounding box from the system. There is only an object-ness loss if a ground truth object does not have a bounding box prior assigned to it; there is no loss for coordinate or class predictions.</p>							
+							<p>When a box's overlap with a ground truth object exceeds a certain threshold but it doesn't have the highest IOU, the prediction is disregarded (They use the threshold of 0.5).</p>
+
+							<p style="font-weight:bold;"><i>Let’s now look what makes YOLOv3 perform better from previous versions of Yolo:</i></p>
+							<ol>
+								<li><span style='font-weight:bold;'>Feature Extractor Network (Darknet-53) :</span> A new network is used by YOLOv3 to extract features. The new network has some shortcut connections because it is a hybrid of the network used in YOLOv2 (Darknet-19) and the residual network. As a result of its 53 convolutional layers, it is known as Darknet-53.
+									After training on classification the fully connected layer is removed from Darknet-53.</li><br>
+								<li><span style='font-weight:bold;'>Predictions Across Scales : </span> As shown in the image below, YOLOv3 predicts boxes at 3 different scales as opposed to YOLO and YOLO2, which predict the output at the last layer :</li>
+							</ol>
+
+							<figure>
+								<img src="images\BLOGS\YOLO\img13.png" style="position: relative;left: 300px;"
+								width="50%" 
+								height="50%" />
+								<figcaption style="text-align:center;font-size:1vw;font-style: italic;position: relative;left:20px;top:0px">Figure 12. Scaling of image for Yolo-v3 </figcaption>				
+							</figure>
+
+							<p>Three anchor boxes are used at each scale, and YOLOv3 predicts three boxes for any grid cell. In a single detection tensor, each object is still only assigned to one grid cell.</p>
+
+							<p><span style="font-weight:bold;font-size: 1.3vw;">Results :</span><br>
+							<figure>
+								<img src="images\BLOGS\YOLO\img14.png" style="position: relative;left: 310px;"
+								width="45%" 
+								height="45%" />
+								<figcaption style="text-align:center;font-size:1vw;font-style: italic;position: relative;left:20px;top:0px">Figure 13. Results of YOLO-v3</figcaption>				
+							</figure>
+							<p>YOLOv3-320 has an inference time of 22 milliseconds and a mAP of 28.2. (On the dataset COCO). Compared to the SSD object detection method, this is three times faster while maintaining similar accuracy.</p>
+
+							<h1 style=font-size:2vw;text-align:center;>II. D  <BR> YOLO-v4</h1>
+
+							<p>Alexey Bochkovskiy, et al. released YOLOV4 in their 2020 paper, not Joseph Redmon. <a href="https://arxiv.org/abs/2004.10934v1" style="color:rgb(0, 30, 179)"><i>YOLOv4: Optimal Object Detection Speed and Accuracy.</i></a><br>
+							A one-stage object detection model called YOLOv4 enhances YOLOv3 by adding a number of modules and trick bags that have been discussed in the literature.</p>
+
+							<p>ImageNet classification is typically used as pretraining for the object detector's backbone network. Pretraining refers to the network's weights being modified for the new task of object detection even though they have already been trained to recognise important features in an image.</p>
+							<p>The authors considered the following backbones for the YOLOv4 object detector :</p>
+							<ul>
+								<li>CSPResNext50</li>
+								<li>CSPDarknet53</li>
+								<li>EfficientNet-B3</li>
+							</ul>
+
+							<p>The final YOLOv4 network implements CSPDarknet53 for the backbone network based on their intuition and experimental results (i.e., A LOT of experimental results).<br><br>
+								<span  style="font-weight:bold;"><i>YOLOv4 uses the same YOLO head as YOLOv3 for detection with three levels of granularity and anchor-based detection steps.</i></span><br><br>
+								The ideas of the bag of freebies (techniques that improve model performance without raising the cost of inference) and the bag of specials were first introduced in YOLOv4 (techniques that increase accuracy while increasing the computation cost).</p>
+							
+							<ul>
+								<li style="font-weight:bold;">YOLOv4 - Bag of Freebies : </li>
+								<ol>
+									<li>Data augmentation methods include Cutmix (which combines multiple images with objects we want to detect), Mixup (random image mixing), Cutout, and mosaic data augmentation.</li>
+									<li>Bounding box regression loss: Testing various bounding box regression types Like MSE, IoU, CIoU, and DIoU.</li>
+									<li>Regularization: Various regularisation methods, including Dropout, DropPath, Spatial Dropout, and DropBlock</li>
+									<li>Normalization: The cross mini-batch normalisation was introduced, and it has been shown to improve accuracy. along with methods like GPU normalisation and iteration-batch normalisation.</li>
+								</ol>
+								<li style="font-weight:bold;">YOLOv4 - Bag of Specials :</li>
+								<ol>
+									<li>Spatial attention modules (SAM): SAM uses the relationship between inter-spacial features to produce feature maps. help improve accuracy but lengthen training periods.</li>
+									<li>Non-max suppression (NMS): When objects are grouped together, we receive several bounding boxes as predictions. False/excess boxes are reduced by non-max suppression.</li>
+									<li>Non-linear activation functions:  Various types of activation functions were examined using the YOLOv4 model. For instance, ReLU, SELU, Leaky, Swish, and Mish</li>
+									<li>Skip-Connections such as cross-stage partial connections or weighted residual connections (WRC) (CSP).</li>
+								</ol>								
+							</ul>
+
+							<p>In conclusion, YOLOv4 is a collection of small novel additions to well-established computer vision techniques. The main contribution is to understand how all of these methods can be combined to effectively and efficiently complement one another for object detection.</p>
+							
+							<p><span style="font-weight:bold;font-size: 1.3vw;">Results :</span><br>
+							With a mAP of 43.5 percent on the COCO dataset, it moves at a speed of 62 frames per second.</p>
+
+							<h1 style=font-size:2vw;text-align:center;>II. E  <BR> YOLO-v5</h1>
+
+							<p>Following YOLOv4, the company Ultranytics is said to release <a href="https://pytorch.org/hub/ultralytics_yolov5/" style="color:rgb(0, 30, 179)"><i>YOLOv5</i></a>, the fifth member of the YOLO family, in 2020. Although no paper has been published, there is discussion in the community about whether the PyTorch implementation of YOLOv3 justifies the use of the YOLO brand.</p>
+							<p>Tech advancements in YOLOv5:</p>
+
+							<ul>
+								<li>More accurate calculations for data augmentation and loss (Now that the base of the model has shifted from C to PyTorch)</li>
+								<li>Automatic anchor box learning (they do not need to be added manually now)</li>
+								<li>The backbone's use of cross-stage partial connections (CSP).</li>
+								<li>The model's neck uses a path aggregation (PAN) network.</li>
+								<li>Simpler to train and test framework (PyTorch).</li>
+								<li>Installation and use are simple.</li>
+								<li>The new version supports YAML files instead of CFG files, greatly improving the layout and readability of model configuration files.</li>
+							</ul>
+
+							<p><span style="font-weight:bold;font-size: 1.3vw;">Results :</span><br>
+							Since there isn't an official document yet, the performance's authenticity cannot be guaranteed. It uses less processing power than the other YOLO models while achieving the same, if not better, accuracy (mAP of 55.6).</p>
+
+							<h1 style=font-size:2.0vw;font-weight:bold;>Conclusion</h1>
+							<p>One of the most potent object detection algorithms, known as YOLO, is presented in this article. Following a brief introduction to the YOLO family, we introduced the various models. The advancements with each Yolo version can be compared to one another.</p>
+							<p>This article explains the YOLO method theoretically, but there are many useful resources available as well, such as the <a href="https://github.com/ultralytics/yolov5" style="color:rgb(0, 30, 179)"><i>YOLO v5 repository</i></a>, which is unquestionably the best option when it comes to solving objects detection problems.</p>
+                            <p style="text-align: center">Thanks for reading this blog.&#128516;</p>
+							<h1 style=font-size:1.8vw;font-weight:bold;>References</h1>
+							<ul>
+								<li>1. <a href='https://arxiv.org/pdf/1506.02640.pdf' style="color:rgb(0, 30, 179)">https://arxiv.org/pdf/1506.02640.pdf</a></li>
+								<li>2. <a href='https://arxiv.org/abs/2004.10934' style="color:rgb(0, 30, 179)">https://arxiv.org/abs/2004.10934</a></li>
+								<li>3. <a href='https://www.researchgate.net/' style="color:rgb(0, 30, 179)">https://www.researchgate.net/</a></li>
+								<li>4. <a href='https://projectgurukul.org/' style="color:rgb(0, 30, 179)">https://projectgurukul.org/</a></li>
+								<li>5. <a href='https://manalelaidouni.github.io/Understanding%20YOLO%20and%20YOLOv2.html' style="color:rgb(0, 30, 179)">https://manalelaidouni.github.io/Understanding%20YOLO%20and%20YOLOv2.html</a></li>
+							</ul>							
+						</div>
+					</div>
+
+				<!-- Footer -->
+				<footer id="footer">
+					<div class="inner">
+						<section>
+							<h2 style=text-align:center;position:relative;left:220px;font-size:1.6vw>Follow</h2>
+							<ul class="icons" style=text-align:center;position:relative;left:220px;>
+								<li><a href="https://twitter.com/WaghHimanshu" class="icon brands style2 fa-twitter"><span class="label">Twitter</span></a></li>
+								<li><a href="https://www.linkedin.com/in/himanshu-wagh-82ba96141/" class="icon brands style2 fa-linkedin-in"><span class="label">Linkedin</span></a></li>									
+								<li><a href="https://github.com/Himanshuwagh" class="icon brands style2 fa-github"><span class="label">GitHub</span></a></li>									
+								<li><a href="https://www.kaggle.com/himanshuwagh" class="icon brands style2 fa-kaggle"><span class="label">Kaggle</span></a></li>
+								<li><a href= "mailto: waghhimanshu@gmail.com" class="icon solid style2 fa-envelope"><span class="label">Email</span></a></li>
+								<!-- <li><a href="https://medium.com/@waghhimanshu" class="icon brands style2 fa-medium"><span class="label">Medium</span></a></li>									 -->
+							</ul>
+						</section>
+						<ul class="copyright" style=text-align:center;>
+							<li>&copy; Untitled. All rights reserved</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+						</ul>
+					</div>
+				</footer>
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
